@@ -1,0 +1,19 @@
+.Projects {
+    background-color: var(--color-background2);
+}
+
+.Projects-Title {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+.Projects-Grid {
+    justify-content: center;
+    align-items: center;
+}
+
+.Project {
+    margin: 10px;
+}

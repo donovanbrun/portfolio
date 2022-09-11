@@ -1,0 +1,10 @@
+.About {
+    background-color: var(--color-background2);
+}
+
+.About-Title {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 30px;
+}

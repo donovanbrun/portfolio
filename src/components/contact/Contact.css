@@ -1,0 +1,10 @@
+.Contact {
+    background-color: var(--color-background);
+}
+
+.Contact-Title {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 30px;
+}

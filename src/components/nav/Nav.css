@@ -1,0 +1,22 @@
+.Nav {
+    height: 100%;
+    left: 1vw;
+    position: fixed;
+    display: grid;
+    width: 3vw;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .Nav {
+        display: none;
+    }
+}
+
+.Icon {
+    color: white;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
