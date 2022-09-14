@@ -9,11 +9,30 @@
     padding: 30px;
 }
 
-.Projects-Grid {
+.Projects-list {
+    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .Projects-list {
+        flex-direction: column;
+    }
 }
 
 .Project {
-    margin: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.ProjetTitle {
+    font-size: 30px;
 }

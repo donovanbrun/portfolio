@@ -2,9 +2,45 @@
     background-color: var(--color-background2);
 }
 
-.About-Title {
+.AboutTitle {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding: 30px;
+}
+
+.AboutContent {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.AboutSectionImage {
+
+}
+
+.AboutSectionText {
+
+}
+
+.AboutImage {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.AboutText1 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .AboutContent {
+        flex-direction: column;
+    }
+    .AboutImage {
+        width: 100px;
+    }
 }

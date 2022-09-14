@@ -1,36 +1,26 @@
 import React from 'react';
 import './Projects.css';
-import {Button, Card, CardActions, CardContent, CardHeader, Grid, Typography} from "@mui/material";
 
 const Projects = () => {
     return (
         <div className="Projects container" id="Projects">
             <h1 className="Projects-Title">Projects</h1>
-            <Grid className="Projects-Grid" container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>                <Project/>
-                <Project/>
-                <Project/>
-                <Project/>
-                <Project/>
-            </Grid>
+            <div className='Projects-list'>
+                <Project name="Organizr" github="https://github.com/donovanbrun/organizr-back" description="My productivity projet"/>
+                <Project name="Portfolio" github="https://github.com/donovanbrun/portfolio" description="Obviously this portfolio"/>
+                <Project name="V8" github="https://github.com/donovanbrun/portfolio" description="Website for my V8 computer case project"/>
+            </div>
         </div>
     );
 }
 
-const Project = () => {
+const Project = (props) => {
     return (
-        <Card variant="outlined" className="Project">
-            <CardHeader
-                title="My Project"
-            />
-            <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    That's my project
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
-        </Card>
+        <div className='Project'>
+            <p className='ProjetTitle'>{props.name}</p>
+            <p className='ProjectDescription'>{props.description}</p>
+            <a className='' href={props.github} target="_blank" rel="noreferrer">See on Github</a>
+        </div>
     );
 }
 

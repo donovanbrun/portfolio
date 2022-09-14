@@ -2,7 +2,7 @@
     background-color: #282c34;
 }
 
-.Stack-Title {
+.StackTitle {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -11,20 +11,13 @@
 
 .Stacks {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
 }
 
-.Stack-Item {
-    color: white;
-}
-
-.Stack-Item-Title {
-    font-size: 2rem;
-    margin: 10px;
-}
-
-.Stack-Item-List-Item {
-    text-align: center;
+.StacksText {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
 }
