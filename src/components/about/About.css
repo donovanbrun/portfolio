@@ -1,9 +1,13 @@
 .About {
     background-color: var(--color-background2);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .AboutTitle {
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding: 30px;
@@ -11,20 +15,32 @@
 
 .AboutContent {
     display: flex;
-    flex-direction: row;
-    gap: 50px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.AboutContent > * {
+    margin: 5px;
+}
+
 .AboutText1 {
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: center;
+    width: fit-content;
 }
 
 @media (max-width: 768px) {
+    .About {
+        padding: 5px;
+    }
+
+    .AboutTitle {
+        padding: 10px;
+    }
+
     .AboutContent {
         flex-direction: column;
     }

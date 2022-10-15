@@ -1,9 +1,13 @@
 .Projects {
     background-color: var(--color-background2);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .Projects-Title {
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding: 30px;
@@ -31,9 +35,16 @@
     align-items: center;
     gap: 10px;
     padding: 10px;
+    border-radius: 20px;
+    max-width: 200px;
+    height: fit-content;
 }
 
 .ProjetTitle {
     cursor: pointer;
     font-size: 30px;
+}
+
+.ProjectDescription {
+    text-align: center;
 }

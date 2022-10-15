@@ -1,5 +1,9 @@
 .Stack {
-    background-color: #282c34;
+    background-color: var(--color-background);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .StackTitle {
@@ -14,10 +18,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 
-.StacksText {
+.StacksText1 {
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
+}
+
+.StacksText2 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }

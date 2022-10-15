@@ -1,5 +1,9 @@
 .Contact {
     background-color: var(--color-background);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .Contact-Title {
@@ -13,9 +17,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .ContactImage {
-    width: 100px;
+    width: 80px;
 }

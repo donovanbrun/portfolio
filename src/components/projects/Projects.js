@@ -25,16 +25,18 @@ export default function Projects() {
     }
 
     return (
-        <div className="Projects container" id="Projects">
-            <h1 className="Projects-Title">Projects</h1>
-            <div className='Projects-list'>
-                <Project name="Organizr" github="https://github.com/donovanbrun/organizr-back" description="My productivity projet"/>
-                <Project name="Portfolio" github="https://github.com/donovanbrun/portfolio" description="Obviously this portfolio"/>
-                <Project name="V8" github="https://github.com/donovanbrun/portfolio" description="Website for my V8 computer case project"/>
-            </div>
+        <div className='container'>
+            <div className="Projects" id="Projects">
+                <h1 className="Projects-Title">Projects</h1>
+                <div className='Projects-list'>
+                    <Project name="Organizr" github="https://github.com/donovanbrun/organizr-back" description="My productivity projet"/>
+                    <Project name="Alumni FIL" github="https://github.com/donovanbrun/alumni-frontend" description="Website for alumni of FIL at IMT Atlantique"/>
+                    <Project name="Portfolio" github="https://github.com/donovanbrun/portfolio" description="Obviously this portfolio"/>
+                </div>
 
-            <ReactModal isOpen={modalIsOpen} onRequestClose={closeModal}>
-            </ReactModal>
+                <ReactModal isOpen={modalIsOpen} onRequestClose={closeModal}>
+                </ReactModal>
+            </div>
         </div>
     );
 }

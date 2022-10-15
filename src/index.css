@@ -11,8 +11,12 @@
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  --color-background: #282c34;
-  --color-background2: #53565f;
+  --color-background: rgb(40, 44, 52, 1);
+  /*--color-background2: rgb(83, 86, 95, 1);*/
+  --color-background2: rgb(188, 167, 144);
+  background-image: url("/wallpaperflare.com_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 html::-webkit-scrollbar, html::-webkit-scrollbar-track, html::-webkit-scrollbar-thumb {
@@ -20,8 +24,10 @@ html::-webkit-scrollbar, html::-webkit-scrollbar-track, html::-webkit-scrollbar-
 }
 
 .container {
-  scroll-snap-align: start;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
