@@ -31,3 +31,12 @@ html::-webkit-scrollbar, html::-webkit-scrollbar-track, html::-webkit-scrollbar-
     justify-content: center;
     align-items: center;
 }
+
+.Modal {
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    inset: 40px;
+    margin: auto;
+    padding: 20px;
+}

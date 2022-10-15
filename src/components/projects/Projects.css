@@ -10,7 +10,7 @@
     color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
 }
 
 .Projects-list {
@@ -29,6 +29,7 @@
 
 .Project {
     background-color: white;
+    border: 2px solid white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,10 +39,14 @@
     border-radius: 20px;
     max-width: 200px;
     height: fit-content;
+    cursor: pointer;
+}
+
+.Project:hover {
+    background-color: var(--color-background2);
 }
 
 .ProjetTitle {
-    cursor: pointer;
     font-size: 30px;
 }
 

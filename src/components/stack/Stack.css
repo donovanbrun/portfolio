@@ -2,6 +2,11 @@
     background-color: var(--color-background);
     width: fit-content;
     height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     border-radius: 20px;
     padding: 20px;
 }
@@ -10,7 +15,7 @@
     color: #fff;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
 }
 
 .Stacks {
@@ -31,4 +36,16 @@
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+}
+
+.StackBtn {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.StackBtn:hover {
+    background-color: var(--color-background);
+    color: white;
 }
