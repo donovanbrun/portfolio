@@ -1,7 +1,7 @@
 import React from 'react';
 import './Stack.css';
 
-const Stack = () => {
+export default function Stack() {
 
     return (
         <div className="Stack container" id="Stack">
@@ -13,5 +13,3 @@ const Stack = () => {
         </div>
     );
 }
-
-export default Stack;
