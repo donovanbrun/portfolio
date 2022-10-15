@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.css';
 
-const Contact = () => {
+export default function Contact() {
 
     return (
         <div className="Contact container" id="Contact">
@@ -13,5 +13,3 @@ const Contact = () => {
         </div>
     );
 }
-
-export default Contact;
