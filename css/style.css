@@ -126,20 +126,30 @@ html::-webkit-scrollbar-thumb {
 }
 
 .AboutText1 {
-    color: rgb(0, 0, 0);
+    color: white;
+    background-color: black;
+    padding: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: center;
     width: fit-content;
 }
 
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
 @media (max-width: 768px) {
     .About {
         padding: 5px;
-    }
-
-    .AboutTitle {
-        padding: 10px;
     }
 
     .AboutContent {
@@ -225,10 +235,4 @@ html::-webkit-scrollbar-thumb {
 
 .ContactImage {
     width: 80px;
-}
-
-.Email {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding-top: 15px;
 }
