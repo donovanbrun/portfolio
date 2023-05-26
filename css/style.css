@@ -207,6 +207,7 @@ body {
 .StacksTitle {
     color: var(--color-primary);
     font-size: 20px;
+    text-align: center;
 }
 
 /* ===== PROJECTS ===== */
