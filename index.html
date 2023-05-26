@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Donovan Brun</title>
 </head>
+
 <body>
+    <button class="DarkModeBtn" onclick="darkmode()"></button>
     <div class="Home Page" id="Home">
         <div>
             <p id='Hi' class='WelcomeTitle'>Hi, I'm</p>
@@ -17,12 +20,12 @@
 
     <div class='Page'>
         <div class="Container Background2" id="About">
-            <h1 class="Title">I'm a french software developer</h1>
+            <h1 class="Title">I'm a French software engineer</h1>
             <div class='AboutContent'>
                 <p class='AboutText1'>2019-2021 <br> IUT Vannes</p>
-                <i class="arrow right"></i>
+                <i class="arrow"></i>
                 <p class='AboutText1'>2021-2024 <br> IMT Atlantique</p>
-                <i class="arrow right"></i>
+                <i class="arrow"></i>
                 <p class='AboutText1'>2021-Now <br> Capgemini - apprenticeship</p>
             </div>
         </div>
@@ -32,11 +35,13 @@
         <div class="Container Background1" id="Stack">
             <h1 class="Title">My areas of expertise</h1>
             <div class='StackContent'>
-                <div class='Stacks'>
-                    <p class='StacksTitle'>Fullstack application</p>
+                <div class='Stacks' onmouseenter="show(this)" onmouseleave="show(this)">
+                    <p class='StacksTitle displayed'>Fullstack application</p>
+                    <p class='StacksTitle hidden'>Designing and building application</p>
                 </div>
-                <div class='Stacks'>
-                    <p class='StacksTitle'>Data engineering</p>
+                <div class='Stacks' onmouseenter="show(this)" onmouseleave="show(this)">
+                    <p class='StacksTitle displayed'>Data engineering</p>
+                    <p class='StacksTitle hidden'>Data-to-insights transformation</p>
                 </div>
             </div>
         </div>
@@ -46,17 +51,56 @@
         <div class="Container Background2" id="Projects">
             <h1 class="Title">My projects</h1>
             <div class='Projects-list'>
-                <div class="Project">
-                    <h1 class="ProjetTitle">Organizr</h1>
-                    <p class="ProjectDescription">My productivity project</p>
+
+                <div class="Project" onmouseenter="show(this)" onmouseleave="show(this)">
+                    <div class="displayed">
+                        <h1 class="ProjetTitle">Organizr</h1>
+                        <p class="ProjectDescription">My productivity project</p>
+                    </div>
+                    <div class="hidden">
+                        <p class="ProjectDescription">Web application</p>
+                        <div>
+                            <img class="ProjectImage" src="img/tech/react.svg" alt="react" />
+                            <img class="ProjectImage" src="img/tech/spring.svg" alt="spring" />
+                            <img class="ProjectImage" src="img/tech/postgres.svg" alt="postgres" />
+                            <img class="ProjectImage" src="img/tech/docker.svg" alt="docker" />
+                        </div>
+                        <a href="https://organizr-donovan.vercel.app" class="ProjectLink" target="_blank">Visit</a>
+                    </div>
                 </div>
-                <div class="Project">
-                    <h1 class="ProjetTitle">Alumni FIL</h1>
-                    <p class="ProjectDescription">Webapp for alumni of FIL at IMT Atlantique</p>
+
+
+                <div class="Project" onmouseenter="show(this)" onmouseleave="show(this)">
+                    <div class="displayed">
+                        <h1 class="ProjetTitle">Alumni FIL</h1>
+                        <p class="ProjectDescription">Webapp for alumni of FIL at IMT Atlantique</p>
+                    </div>
+                    <div class="hidden">
+                        <p class="ProjectDescription">Web application</p>
+                        <div>
+                            <img class="ProjectImage" src="img/tech/angular.svg" alt="angular" />
+                            <img class="ProjectImage" src="img/tech/django.svg" alt="django" />
+                            <img class="ProjectImage" src="img/tech/postgres.svg" alt="postgres" />
+                            <img class="ProjectImage" src="img/tech/docker.svg" alt="docker" />
+                        </div>
+                        <a href="https://github.com/donovanbrun/alumni-frontend" class="ProjectLink" target="_blank">See on Github</a>
+                    </div>
                 </div>
-                <div class="Project">
-                    <h1 class="ProjetTitle">Workflow</h1>
-                    <p class="ProjectDescription">Manage my data</p>
+
+
+                <div class="Project" onmouseenter="show(this)" onmouseleave="show(this)">
+                    <div class="displayed">
+                        <h1 class="ProjetTitle">Workflow</h1>
+                        <p class="ProjectDescription">Manage my data</p>
+                    </div>
+                    <div class="hidden">
+                        <p class="ProjectDescription">API and CRON data engineering</p>
+                        <div>
+                            <img class="ProjectImage" src="img/tech/node.svg" alt="node" />
+                            <img class="ProjectImage" src="img/tech/express.svg" alt="express" />
+                        </div>
+                        <a href="https://github.com/donovanbrun/workflow" class="ProjectLink" target="_blank">See on Github</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,11 +110,17 @@
         <div class="Container Background1" id="Contact">
             <h1 class="Title">Contact me</h1>
             <div class='ContactSection'>
-                <a href='https://www.linkedin.com/in/donovan-brun/' target="_blank" rel="noreferrer"><img alt="linkedin" class="ContactImage" src='img/linkedin.png'/></a>
-                <a href='https://github.com/donovanbrun' target="_blank" rel="noreferrer"><img alt="github" class="ContactImage" src='img/github.png'/></a>
-                <a href='mailto:donovanbrun@gmail.com' target="_blank" rel="noreferrer"><img alt="mail" class="ContactImage" src='img/mail.png'/></a>
+                <a href='https://www.linkedin.com/in/donovan-brun/' target="_blank" rel="noreferrer"><img alt="linkedin"
+                        class="ContactImage" src='img/linkedin.png' /></a>
+                <a href='https://github.com/donovanbrun' target="_blank" rel="noreferrer"><img alt="github"
+                        class="ContactImage" src='img/github.png' /></a>
+                <a href='mailto:donovanbrun@gmail.com' target="_blank" rel="noreferrer"><img alt="mail"
+                        class="ContactImage" src='img/mail.png' /></a>
             </div>
         </div>
     </div>
 </body>
+
+<script src="js/main.js"></script>
+
 </html>
