@@ -241,6 +241,16 @@ body {
     transition: height 1s ease;
 }
 
+@media (max-width: 768px) {
+    .StackContent {
+        flex-direction: column;
+    }
+
+    .Stacks {
+        width: 100%;
+    }
+}
+
 .StacksTitle {
     color: var(--color-primary);
     font-size: 20px;
@@ -281,12 +291,6 @@ body {
     flex-wrap: wrap;
     max-width: 80%;
     margin: auto;
-}
-
-@media (max-width: 768px) {
-    .Projects-list {
-        flex-direction: column;
-    }
 }
 
 .Project {
