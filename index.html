@@ -10,7 +10,26 @@
 </head>
 
 <body>
-    <button class="DarkModeBtn" onclick="darkmode()"></button>
+    <button id="DarkModeBtn""></button>
+
+    <div id="Nav">
+        <a class="NavItem NavItemCurrent" id="NavHome" href="#Home">
+            <img class="NavIcon" src="img/icon/home.svg" alt="home">
+        </a>
+        <a class="NavItem" id="NavAbout" href="#About">
+            <img class="NavIcon" src="img/icon/about.svg" alt="about">
+        </a>
+        <a class="NavItem" id="NavStack" href="#Stack">
+            <img class="NavIcon" src="img/icon/stack.svg" alt="stack">
+        </a>
+        <a class="NavItem" id="NavProjects" href="#Projects">
+            <img class="NavIcon" src="img/icon/project.svg" alt="project">
+        </a>
+        <a class="NavItem" id="NavContact" href="#Contact">
+            <img class="NavIcon" src="img/icon/contact.svg" alt="contact">
+        </a>
+    </div>
+
     <div class="Home Page" id="Home">
         <div>
             <p id='Hi' class='WelcomeTitle'>Hi, I'm</p>
@@ -18,8 +37,8 @@
         </div>
     </div>
 
-    <div class='Page'>
-        <div class="Container Background2" id="About">
+    <div class='Page' id="About">
+        <div class="Container">
             <h1 class="Title">I'm a French software engineer</h1>
             <div class='AboutContent'>
                 <p class='AboutText1'>2019-2021 <br> IUT Vannes</p>
@@ -31,83 +50,30 @@
         </div>
     </div>
 
-    <div class='Page'>
-        <div class="Container Background1" id="Stack">
+    <div class='Page' id="Stack">
+        <div class="Container">
             <h1 class="Title">My areas of expertise</h1>
             <div class='StackContent'>
-                <div class='Stacks' onmouseenter="show(this)" onmouseleave="show(this)">
-                    <p class='StacksTitle displayed'>Fullstack application</p>
-                    <p class='StacksTitle hidden'>Designing and building application</p>
-                </div>
-                <div class='Stacks' onmouseenter="show(this)" onmouseleave="show(this)">
-                    <p class='StacksTitle displayed'>Data engineering</p>
-                    <p class='StacksTitle hidden'>Data-to-insights transformation</p>
-                </div>
+                <stack-card title="Fullstack application" description="Designing and building user interface;Building API;Deploying in the cloud"></stack-card>
+                <stack-card title="Data engineering" description="Data-to-insights transformation;Big Data;Data integration;ETL pattern"></stack-card>
             </div>
         </div>
     </div>
 
-    <div class='Page'>
-        <div class="Container Background2" id="Projects">
+    <div class='Page' id="Projects">
+        <div class="Container">
             <h1 class="Title">My projects</h1>
             <div class='Projects-list'>
-
-                <div class="Project" onmouseenter="show(this)" onmouseleave="show(this)">
-                    <div class="displayed">
-                        <h1 class="ProjetTitle">Organizr</h1>
-                        <p class="ProjectDescription">My productivity project</p>
-                    </div>
-                    <div class="hidden">
-                        <p class="ProjectDescription">Web application</p>
-                        <div>
-                            <img class="ProjectImage" src="img/tech/react.png" alt="react" />
-                            <img class="ProjectImage" src="img/tech/spring.png" alt="spring" />
-                            <img class="ProjectImage" src="img/tech/postgres.png" alt="postgres" />
-                            <img class="ProjectImage" src="img/tech/docker.png" alt="docker" />
-                        </div>
-                        <a href="https://organizr-donovan.vercel.app" class="ProjectLink" target="_blank">Visit</a>
-                    </div>
-                </div>
-
-
-                <div class="Project" onmouseenter="show(this)" onmouseleave="show(this)">
-                    <div class="displayed">
-                        <h1 class="ProjetTitle">Alumni FIL</h1>
-                        <p class="ProjectDescription">Webapp for alumni of FIL at IMT Atlantique</p>
-                    </div>
-                    <div class="hidden">
-                        <p class="ProjectDescription">Web application</p>
-                        <div>
-                            <img class="ProjectImage" src="img/tech/angular.png" alt="angular" />
-                            <img class="ProjectImage" src="img/tech/django.png" alt="django" />
-                            <img class="ProjectImage" src="img/tech/postgres.png" alt="postgres" />
-                            <img class="ProjectImage" src="img/tech/docker.png" alt="docker" />
-                        </div>
-                        <a href="https://github.com/donovanbrun/alumni-frontend" class="ProjectLink" target="_blank">See on Github</a>
-                    </div>
-                </div>
-
-
-                <div class="Project" onmouseenter="show(this)" onmouseleave="show(this)">
-                    <div class="displayed">
-                        <h1 class="ProjetTitle">Workflow</h1>
-                        <p class="ProjectDescription">Manage my data</p>
-                    </div>
-                    <div class="hidden">
-                        <p class="ProjectDescription">API and CRON data engineering</p>
-                        <div>
-                            <img class="ProjectImage" src="img/tech/node.png" alt="node" />
-                            <img class="ProjectImage" src="img/tech/express.png" alt="express" />
-                        </div>
-                        <a href="https://github.com/donovanbrun/workflow" class="ProjectLink" target="_blank">See on Github</a>
-                    </div>
-                </div>
+                <project-card title="Organizr" description="My productivity project" detail="Web application" link="https://organizr-donovan.vercel.app" tech="react,spring,postgres,docker"></project-card>
+                <project-card title="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique" detail="Web application" link="https://github.com/donovanbrun/alumni-backend" tech="angular,django,postgres,docker"></project-card>
+                <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering" link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
+                <project-card title="TchouTchou" description="Railway sandbox" detail="Web game" link="https://tchou-tchou.vercel.app/" tech="typescript"></project-card>
             </div>
         </div>
     </div>
 
-    <div class='Page'>
-        <div class="Container Background1" id="Contact">
+    <div class='Page' id="Contact">
+        <div class="Container">
             <h1 class="Title">Contact me</h1>
             <div class='ContactSection'>
                 <a href='https://www.linkedin.com/in/donovan-brun/' target="_blank" rel="noreferrer"><img alt="linkedin"
@@ -121,6 +87,5 @@
     </div>
 </body>
 
-<script src="js/main.js"></script>
-
+<script type="module" src="js/main.js"></script>
 </html>

@@ -15,15 +15,15 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
-
+/*
 html {
     scroll-behavior: auto;
     scroll-snap-type: y mandatory;
 }
-
+*/
 html::-webkit-scrollbar {
     background-color: var(--color-primary);
-    width: 5px;
+    width: 0px;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -31,7 +31,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
 }
 
 .Page {
@@ -80,15 +80,54 @@ body {
     color: var(--color-primary);
 }
 
-.DarkModeBtn {
+#DarkModeBtn {
     position: fixed;
-    top: 1%;
-    left: 1%;
+    top: 15px;
+    left: 15px;
     border-radius: 15px;
     padding: 15px;
     background-color: var(--color-secondary);
     color: var(--color-primary);
     cursor: pointer;
+}
+
+/* ===== NAVBAR ===== */
+
+#Nav {
+    position: fixed;
+    height: 50vh;
+    top: 25vh;
+    left: 1vw;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavItem {
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--color-primary);
+    outline: 1px var(--color-secondary) solid;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--color-primary);
+}
+
+.NavItemCurrent {
+    transform: scale(1.2) translate(10px, 0px);
+    transition: transform 0.2s;
+}
+
+.NavIcon {
+    width: 24px;
+}
+
+@media (max-width: 768px) {
+    #Nav {
+        display: none;
+    }
 }
 
 /* ===== HOME ===== */
@@ -117,7 +156,6 @@ body {
 @keyframes appear {
     from {
         opacity: 0%;
-        transform: translate(-50vw);
     }
   
     to {
@@ -187,9 +225,7 @@ body {
 
 .StackContent {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 10px;
 }
 
@@ -201,7 +237,8 @@ body {
     background-color: var(--color-secondary);
     padding: 20px;
     gap: 5px;
-    width: 100%;
+    width: 25rem;
+    transition: height 1s ease;
 }
 
 .StacksTitle {
@@ -210,13 +247,40 @@ body {
     text-align: center;
 }
 
+.StacksDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.StacksDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow-down {
+    border: solid var(--color-primary);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(45deg);
+}
+
 /* ===== PROJECTS ===== */
 
 .Projects-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -242,7 +306,7 @@ body {
     gap: 10px;
 }
 
-.ProjetTitle {
+.ProjectTitle {
     font-size: 24px;
     color: var(--color-primary);
 }
