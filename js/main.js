@@ -1,5 +1,6 @@
 import './Project.js';
 import './Stack.js';
+import './Experience.js';
 
 var r = document.querySelector(':root')
 r.style.setProperty('--color-primary', 'white')
