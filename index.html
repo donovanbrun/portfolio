@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
     <title>Donovan Brun</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1XM8J3VPW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S1XM8J3VPW');
+    </script>
 </head>
 
 <body>
@@ -39,7 +49,7 @@
     </div>
 
     <div class='Page' id="About">
-        <div class="Container">
+        <div class="Container" id="AboutContainer">
             <h1 class="Title">I'm a French software engineer</h1>
             <h2 class="Title AboutTitle">Education</h2>
             <div class="Timeline">
@@ -70,38 +80,48 @@
 
             <h2 class="Title AboutTitle">Experience</h2>
             <div class="ExperienceSection">
-                <experience-card company="IRISA" type="Internship" location="Vannes, France" date="April - June 2021" detail="Integration of an algorithm developed by IRISA in an open source
+                <experience-card company="IRISA" type="Internship" location="Vannes, France" date="April - June 2021"
+                    detail="Integration of an algorithm developed by IRISA in an open source
                 remote sensing and image processing library named Orfeo Toolbox"></experience-card>
-                <experience-card company="Capgemini" type="Apprenticeship" location="Rennes, France" date="2021-2024" detail="Fullstack developer and Data engineer"></experience-card>
-                <experience-card company="Handyhand" type="Internship" location="Copenhagen, Denmark" date="May - August 2023" detail="Fullstack developer"></experience-card>
+                <experience-card company="Capgemini" type="Apprenticeship" location="Rennes, France" date="2021-2024"
+                    detail="Fullstack developer and Data engineer"></experience-card>
+                <experience-card company="Handyhand" type="Internship" location="Copenhagen, Denmark"
+                    date="May - August 2023" detail="Fullstack developer"></experience-card>
             </div>
         </div>
     </div>
 
     <div class='Page' id="Stack">
-        <div class="Container">
+        <div class="Container" id="StackContainer">
             <h1 class="Title">My areas of expertise</h1>
             <div class='StackContent'>
-                <stack-card title="Fullstack application" description="Designing and building user interface;Building API;Deploying in the cloud"></stack-card>
-                <stack-card title="Data engineering" description="Data-to-insights transformation;Big Data;Data integration;ETL pattern"></stack-card>
+                <stack-card title="Fullstack application"
+                    description="Designing and building user interface;Building API;Deploying in the cloud"></stack-card>
+                <stack-card title="Data engineering"
+                    description="Data-to-insights transformation;Big Data;Data integration;ETL pattern"></stack-card>
             </div>
         </div>
     </div>
 
     <div class='Page' id="Projects">
-        <div class="Container">
+        <div class="Container" id="ProjectsContainer">
             <h1 class="Title">My projects</h1>
             <div class='Projects-list'>
-                <project-card title="Organizr" description="My productivity project" detail="Web application" link="https://organizr-donovan.vercel.app" tech="react,spring,postgres,docker"></project-card>
-                <project-card title="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique" detail="Web application" link="https://github.com/donovanbrun/alumni-backend" tech="angular,django,postgres,docker"></project-card>
-                <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering" link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
-                <project-card title="TchouTchou" description="Railway sandbox" detail="Web game" link="https://tchou-tchou.vercel.app/" tech="typescript"></project-card>
+                <project-card title="Organizr" description="My productivity project" detail="Web application"
+                    link="https://organizr-donovan.vercel.app" tech="react,spring,postgres,docker"></project-card>
+                <project-card title="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
+                    detail="Web application" link="https://github.com/donovanbrun/alumni-backend"
+                    tech="angular,django,postgres,docker"></project-card>
+                <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering"
+                    link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
+                <project-card title="TchouTchou" description="Railway sandbox" detail="Web game"
+                    link="https://tchou-tchou.vercel.app/" tech="typescript"></project-card>
             </div>
         </div>
     </div>
 
     <div class='Page' id="Contact">
-        <div class="Container">
+        <div class="Container" id="ContactContainer">
             <h1 class="Title">Contact me</h1>
             <div class='ContactSection'>
                 <a href='https://www.linkedin.com/in/donovan-brun/' target="_blank" rel="noreferrer"><img alt="linkedin"
@@ -116,4 +136,5 @@
 </body>
 
 <script type="module" src="js/main.js"></script>
+
 </html>

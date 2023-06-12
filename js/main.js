@@ -44,6 +44,11 @@ const stackNav = document.getElementById('NavStack');
 const projectsNav = document.getElementById('NavProjects');
 const contactNav = document.getElementById('NavContact');
 
+const aboutContainer = document.getElementById('AboutContainer');
+const stackContainer = document.getElementById('StackContainer');
+const projectsContainer = document.getElementById('ProjectsContainer');
+const contactContainer = document.getElementById('ContactContainer');
+
 window.addEventListener('scroll', () => {
     if (isInViewport(homeDiv)) {
         homeNav.classList.add('NavItemCurrent');
@@ -51,6 +56,15 @@ window.addEventListener('scroll', () => {
         projectsNav.classList.remove('NavItemCurrent');
         stackNav.classList.remove('NavItemCurrent');
         contactNav.classList.remove('NavItemCurrent');
+
+        // aboutContainer.classList.remove('slideLeft');
+        // aboutContainer.classList.add('unslideLeft');
+        // stackContainer.classList.remove('slideRight');
+        // stackContainer.classList.add('unslideRight');
+        // projectsContainer.classList.remove('slideLeft');
+        // projectsContainer.classList.add('unslideLeft');
+        // contactContainer.classList.remove('slideRight');
+        // contactContainer.classList.add('unslideRight');
     }
     else if (isInViewport(aboutDiv)) {
         homeNav.classList.remove('NavItemCurrent');
@@ -58,13 +72,15 @@ window.addEventListener('scroll', () => {
         projectsNav.classList.remove('NavItemCurrent');
         stackNav.classList.remove('NavItemCurrent');
         contactNav.classList.remove('NavItemCurrent');
-    }
-    else if (isInViewport(projectsDiv)) {
-        homeNav.classList.remove('NavItemCurrent');
-        aboutNav.classList.remove('NavItemCurrent');
-        projectsNav.classList.add('NavItemCurrent');
-        stackNav.classList.remove('NavItemCurrent');
-        contactNav.classList.remove('NavItemCurrent');
+
+        // aboutContainer.classList.remove('unslideLeft');
+        // aboutContainer.classList.add('slideLeft');
+        // stackContainer.classList.remove('slideRight');
+        // stackContainer.classList.add('unslideRight');
+        // projectsContainer.classList.remove('slideLeft');
+        // projectsContainer.classList.add('unslideLeft');
+        // contactContainer.classList.remove('slideRight');
+        // contactContainer.classList.add('unslideRight');
     }
     else if (isInViewport(stackDiv)) {
         homeNav.classList.remove('NavItemCurrent');
@@ -72,6 +88,31 @@ window.addEventListener('scroll', () => {
         projectsNav.classList.remove('NavItemCurrent');
         stackNav.classList.add('NavItemCurrent');
         contactNav.classList.remove('NavItemCurrent');
+
+        // aboutContainer.classList.remove('slideLeft');
+        // aboutContainer.classList.add('unslideLeft');
+        // stackContainer.classList.remove('unslideRight');
+        // stackContainer.classList.add('slideRight');
+        // projectsContainer.classList.remove('slideLeft');
+        // projectsContainer.classList.add('unslideLeft');
+        // contactContainer.classList.remove('slideRight');
+        // contactContainer.classList.add('unslideRight');
+    }
+    else if (isInViewport(projectsDiv)) {
+        homeNav.classList.remove('NavItemCurrent');
+        aboutNav.classList.remove('NavItemCurrent');
+        projectsNav.classList.add('NavItemCurrent');
+        stackNav.classList.remove('NavItemCurrent');
+        contactNav.classList.remove('NavItemCurrent');
+
+        // aboutContainer.classList.remove('slideLeft');
+        // aboutContainer.classList.add('unslideLeft');
+        // stackContainer.classList.remove('slideRight');
+        // stackContainer.classList.add('unslideRight');
+        // projectsContainer.classList.remove('unslideLeft');
+        // projectsContainer.classList.add('slideLeft');
+        // contactContainer.classList.remove('slideRight');
+        // contactContainer.classList.add('unslideRight');
     }
     else if (isInViewport(contactDiv)) {
         homeNav.classList.remove('NavItemCurrent');
@@ -79,5 +120,14 @@ window.addEventListener('scroll', () => {
         projectsNav.classList.remove('NavItemCurrent');
         stackNav.classList.remove('NavItemCurrent');
         contactNav.classList.add('NavItemCurrent');
+
+        // aboutContainer.classList.remove('slideLeft');
+        // aboutContainer.classList.add('unslideLeft');
+        // stackContainer.classList.remove('slideRight');
+        // stackContainer.classList.add('unslideRight');
+        // projectsContainer.classList.remove('slideLeft');
+        // projectsContainer.classList.add('unslideLeft');
+        // contactContainer.classList.remove('unslideRight');
+        // contactContainer.classList.add('slideRight');
     }
 });
