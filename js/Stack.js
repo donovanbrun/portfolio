@@ -1,9 +1,9 @@
 export class StackCard extends HTMLElement {
+
     constructor() {
         super();
 
         const title = this.getAttribute('title');
-        const description = this.getAttribute('description');
 
         this.innerHTML = `
         <div class='Stacks'>
@@ -11,58 +11,48 @@ export class StackCard extends HTMLElement {
                 <p class='StacksTitle'>${title}</p>
                 <i class="arrow-down"></i>
             </div>
-            <div class="StacksDescription hidden">
-            </div>
         </div>
         `;
     }
 
     connectedCallback() {
         this.addEventListener('mouseenter', () => this.show());
-        this.addEventListener('mouseleave', () => this.show());
-
-        const descDiv = this.querySelector('.StacksDescription');
-        const description = this.getAttribute('description');
-
-        if (description) {
-            description.split(';').forEach(d => {
-                let p = document.createElement('p');
-                p.className = "StacksTitle";
-                p.innerHTML = d;
-                descDiv.appendChild(p);
-            });
-        }
+        this.addEventListener('mouseleave', () => this.unshow());
     }
 
     show() {
-        const displayedDiv = this.children[0].children[0];
-        const hiddenDiv = this.children[0].children[1];
-        const animationSpeed = 500;
+        const detailSection = document.querySelector('.StackDetailSection');
+        const desc = this.getAttribute('description');
+        if (desc) {
+            desc.split(';').forEach(d => {
+                let p = document.createElement('p');
+                p.className = "StacksTitle";
+                p.innerHTML = d;
+                detailSection.appendChild(p);
+            });
+        }
 
-        if (displayedDiv.style.display === 'none') {
-            displayedDiv.style.display = 'flex'
-            displayedDiv.animate([
-                { opacity: '0' },
-                { opacity: '1' }
-            ], {
-                duration: animationSpeed,
-                easing: 'ease-in-out',
-                fill: 'forwards'
-            })
-            hiddenDiv.style.display = 'none'
-        }
-        else {
-            displayedDiv.style.display = 'none'
-            hiddenDiv.style.display = 'flex'
-            hiddenDiv.animate([
-                { opacity: '0' },
-                { opacity: '1' }
-            ], {
-                duration: animationSpeed,
-                easing: 'ease-in-out',
-                fill: 'forwards'
-            })
-        }
+        detailSection.animate([
+            { opacity: '0' },
+            { opacity: '1' }
+        ], {
+            duration: 500,
+            easing: 'ease-in-out',
+            fill: 'forwards'
+        })
+    }
+
+    unshow() {
+        const detailSection = document.querySelector('.StackDetailSection');
+        detailSection.animate([
+            { opacity: '1' },
+            { opacity: '0' }
+        ], {
+            duration: 500,
+            easing: 'ease-in-out',
+            fill: 'forwards'
+        })
+        detailSection.innerHTML = '';
     }
 }
 

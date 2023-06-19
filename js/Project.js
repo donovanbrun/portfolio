@@ -1,4 +1,9 @@
+import { showModal } from "./Modal.js";
+
 export class ProjectCard extends HTMLElement {
+
+    content;
+
     constructor() {
         super();
 
@@ -6,6 +11,7 @@ export class ProjectCard extends HTMLElement {
         const description = this.getAttribute('description');
         const detail = this.getAttribute('detail');
         const link = this.getAttribute('link');
+        this.content = this.innerHTML;
 
         this.innerHTML = `
         <div class="Project">
@@ -17,7 +23,7 @@ export class ProjectCard extends HTMLElement {
             <p class="ProjectDescription">${detail}</p>
             <div class="ProjectTech">
             </div>
-            <a href="${link}" class="ProjectLink" target="_blank">Visit</a>
+            <a class="ProjectLink" target="_blank">See more</a>
           </div>
         </div>
         `;
@@ -35,10 +41,14 @@ export class ProjectCard extends HTMLElement {
                 const img = document.createElement('img');
                 img.src = `img/tech/${tech}.png`;
                 img.alt = tech;
+                img.title = tech;
                 img.classList.add('ProjectImage');
                 techDiv.appendChild(img);
             });
         }
+
+        const projectDiv = this.querySelector('.Project');
+        projectDiv.addEventListener('click', () => this.open());
     }
 
     show() {
@@ -70,6 +80,12 @@ export class ProjectCard extends HTMLElement {
                 easing: 'ease-in-out',
                 fill: 'forwards'
             })
+        }
+    }
+
+    open() {
+        if (this.content !== '') {
+            showModal(this.content);
         }
     }
 }

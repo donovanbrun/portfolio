@@ -22,6 +22,9 @@
 
 <body>
     <button id="DarkModeBtn" title="Darkmode"></button>
+    <div class="modal-zone">
+        <div class="modal"></div>
+    </div>
 
     <div id="Nav">
         <a class="NavItem NavItemCurrent" id="NavHome" href="#Home" title="Home">
@@ -100,6 +103,7 @@
                 <stack-card title="Data engineering"
                     description="Data-to-insights transformation;Big Data;Data integration;ETL pattern"></stack-card>
             </div>
+            <div class="StackDetailSection"></div>
         </div>
     </div>
 
@@ -108,14 +112,39 @@
             <h1 class="Title">My projects</h1>
             <div class='Projects-list'>
                 <project-card title="Organizr" description="My productivity project" detail="Web application"
-                    link="https://organizr-donovan.vercel.app" tech="react,spring,postgres,docker"></project-card>
+                    link="https://organizr-donovan.vercel.app" tech="react,spring,postgres,docker">
+                    <h1>Organizr</h1>
+                    <h3>A simple web application that I use every day to manage my tasks and take notes.<br>It works both online and offline.</h3>
+                    <h4>Status : finished</h4>
+                    <div>
+                        <a href="https://github.com/donovanbrun/organizr-front">Github web</a>
+                        <a href="https://github.com/donovanbrun/organizr-back">Github api</a>
+                    </div>
+                    <a href="https://organizr-donovan.vercel.app">Try it now !</a>
+                </project-card>
+                <project-card title="Sandwhich" description="Sandwich recipes sharing application" detail="Mobile app"
+                    link="https://github.com/donovanbrun/sandwhich" tech="react-native,gofiber,mongodb">
+                    <h1>Sandwhich</h1>
+                    <h3>A mobile application for sharing your best sandwich recipes with others.</h3>
+                    <h4>Status : in progress</h4>
+                    <div>
+                        <a href="https://github.com/donovanbrun/sandwhich">Github mobile app</a>
+                        <a href="https://github.com/donovanbrun/sandwhich-api">Github api</a>
+                    </div>
+                </project-card>
+                <project-card title="TchouTchou" description="Railway sandbox" detail="Web game"
+                        link="https://tchou-tchou.vercel.app" tech="typescript">
+                    <h1>TchouTchou</h1>
+                    <h3>A web-based sandbox game where you can construct and play with your own railway.</h3>
+                    <h4>We were five working on this project for two months.</h4>
+                    <h4>Status : finished</h4>
+                    <a href="https://tchou-tchou.vercel.app">Try it now !</a>
+                </project-card>
                 <project-card title="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
                     detail="Web application" link="https://github.com/donovanbrun/alumni-backend"
                     tech="angular,django,postgres,docker"></project-card>
                 <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering"
                     link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
-                <project-card title="TchouTchou" description="Railway sandbox" detail="Web game"
-                    link="https://tchou-tchou.vercel.app/" tech="typescript"></project-card>
             </div>
         </div>
     </div>
