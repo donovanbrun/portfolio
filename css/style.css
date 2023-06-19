@@ -118,6 +118,7 @@ body {
     height: fit-content;
     padding: 30px;
     background-color: white;
+    border-radius: 20px;
 }
 
 .modal > * {
@@ -153,9 +154,13 @@ body {
     text-align: center;
     background-color: var(--color-primary);
     outline: 1px var(--color-secondary) solid;
-    padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
+    width: 48px;
+    height: 48px;
     color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .NavItem:hover {
@@ -170,6 +175,7 @@ body {
 
 .NavIcon {
     width: 24px;
+    height: 24px;
 }
 
 @media (max-width: 768px) {
@@ -188,8 +194,8 @@ body {
 #Hi {
     margin-right: 100px;
     color: var(--color-secondary);
-    animation-duration: 2s;
-    animation-name: appear;
+    /* animation-duration: 2s;
+    animation-name: appear; */
 }
 
 #Name {
@@ -197,11 +203,12 @@ body {
     padding: 5px 10px;
     background-color: var(--color-secondary);
     color: var(--color-primary);
-    animation-duration: 3s;
-    animation-name: appear;
+    border-radius: 20px;
+    /* animation-duration: 3s;
+    animation-name: appear; */
 }
 
-@keyframes appear {
+/* @keyframes appear {
     from {
         opacity: 0%;
     }
@@ -209,17 +216,16 @@ body {
     to {
         opacity: 100%;
     }
-}
+} */
 
-.appear {
+/* .appear {
     animation-duration: 2s;
     animation-name: appear;
-}
+} */
 
 .WelcomeTitle {
     margin: 10px;
     font-size: 5vh;
-    font-style: bold;
 }
 
 @media (max-width: 768px) {
@@ -297,6 +303,7 @@ body {
     color: var(--color-primary);
     width: 15rem;
     height: 10rem;
+    border-radius: 20px;
 }
 
 .Experience > * {
@@ -347,6 +354,7 @@ body {
     gap: 5px;
     width: 25rem;
     transition: height 1s ease;
+    border-radius: 20px;
 }
 
 @media (max-width: 768px) {
@@ -393,6 +401,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    border-radius: 20px;
 }
 
 .arrow-down {
@@ -422,6 +431,7 @@ body {
     width: 20rem;
     height: 10rem;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .Project, .Project > * {
@@ -442,12 +452,22 @@ body {
     color: var(--color-primary);
 }
 
+.ProjectTech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
 .ProjectImage {
     background-color: white;
     border-radius: 50px;
-    width: 48px;
-    height: 48px;
-    margin: 3px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 .ProjectLink {
@@ -478,6 +498,8 @@ body {
     border-radius: 50px;
     width: 100px;
 }
+
+/* ===== ANIMATION ===== */
 
 @keyframes slideRight {
     from {

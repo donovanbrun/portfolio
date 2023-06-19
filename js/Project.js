@@ -38,12 +38,16 @@ export class ProjectCard extends HTMLElement {
 
         if (tech) {
             tech.split(',').forEach(tech => {
+                const div = document.createElement('div');
                 const img = document.createElement('img');
                 img.src = `img/tech/${tech}.png`;
                 img.alt = tech;
                 img.title = tech;
-                img.classList.add('ProjectImage');
-                techDiv.appendChild(img);
+                img.width = 32;
+                img.height = 32;
+                div.classList.add('ProjectImage');
+                div.appendChild(img);
+                techDiv.appendChild(div);
             });
         }
 
