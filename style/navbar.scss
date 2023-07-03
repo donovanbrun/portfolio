@@ -8,35 +8,36 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
+    z-index: 100;
 
-.NavItem {
-    text-decoration: none;
-    text-align: center;
-    background-color: var(--color-primary);
-    outline: 1px var(--color-secondary) solid;
-    border-radius: 20px;
-    width: 48px;
-    height: 48px;
-    color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .NavItem {
+        text-decoration: none;
+        text-align: center;
+        background-color: white;
+        outline: 1px var(--color-secondary) solid;
+        border-radius: 20px;
+        width: 48px;
+        height: 48px;
+        color: var(--color-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-.NavItem:hover {
-    outline: 2px var(--color-secondary) solid;
-}
+        &:hover {
+            outline: 2px var(--color-secondary) solid;
+        }
 
-.NavItemCurrent {
-    outline: 2px var(--color-secondary) solid;
-    transform: scale(1.2) translate(10px, 0px);
-    transition: transform 0.2s;
-}
+        .NavIcon {
+            width: 24px;
+            height: 24px;
+        }
+    }
 
-.NavIcon {
-    width: 24px;
-    height: 24px;
+    .NavItemCurrent {
+        outline: 2px var(--color-secondary) solid;
+        transform: scale(1.2) translate(10px, 0px);
+        transition: transform 0.2s;
+    }
 }
 
 @media (max-width: 768px) {

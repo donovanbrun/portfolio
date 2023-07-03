@@ -10,8 +10,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
-
-.modal {
+.modal-zone .modal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,12 +24,10 @@
   border-radius: 20px;
   z-index: 101;
 }
-
-.modal > * {
+.modal-zone .modal > * {
   text-align: center;
 }
-
-.modal a {
+.modal-zone .modal a {
   text-decoration: underline;
 }
 
@@ -49,12 +46,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
 }
-
-.NavItem {
+#Nav .NavItem {
   text-decoration: none;
   text-align: center;
-  background-color: var(--color-primary);
+  background-color: white;
   outline: 1px var(--color-secondary) solid;
   border-radius: 20px;
   width: 48px;
@@ -64,20 +61,17 @@
   justify-content: center;
   align-items: center;
 }
-
-.NavItem:hover {
+#Nav .NavItem:hover {
   outline: 2px var(--color-secondary) solid;
 }
-
-.NavItemCurrent {
+#Nav .NavItem .NavIcon {
+  width: 24px;
+  height: 24px;
+}
+#Nav .NavItemCurrent {
   outline: 2px var(--color-secondary) solid;
   transform: scale(1.2) translate(10px, 0px);
   transition: transform 0.2s;
-}
-
-.NavIcon {
-  width: 24px;
-  height: 24px;
 }
 
 @media (max-width: 768px) {
@@ -141,8 +135,7 @@
   align-items: center;
   justify-content: center;
 }
-
-.Timeline_item {
+.Timeline .Timeline_item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,31 +146,26 @@
   margin-top: 50px;
   background-color: var(--color-secondary);
 }
-
-.Timeline_year {
+.Timeline .Timeline_item .Timeline_year {
   color: var(--color-primary);
 }
-
-.Timeline_section {
+.Timeline .Timeline_section {
   display: flex;
   align-items: center;
   flex-direction: column;
   height: 50px;
 }
-
-.Timeline_line {
+.Timeline .Timeline_section .Timeline_line {
   width: 200px;
   height: 5px;
   background-color: var(--color-secondary);
 }
-
-.Timeline_pin {
+.Timeline .Timeline_section .Timeline_pin {
   background-color: var(--color-secondary);
   height: 20px;
   width: 3px;
 }
-
-.Timeline_info {
+.Timeline .Timeline_section .Timeline_info {
   width: fit-content;
   background-color: var(--color-secondary);
   color: var(--color-primary);
@@ -192,16 +180,15 @@
   justify-content: center;
   gap: 20px;
 }
-
-.Experience {
+.ExperienceSection .Experience {
   background-color: var(--color-secondary);
   color: var(--color-primary);
   width: 15rem;
   height: 10rem;
   border-radius: 20px;
+  box-shadow: 0px 0px 5px var(--color-secondary);
 }
-
-.Experience > * {
+.ExperienceSection .Experience > * {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -211,13 +198,11 @@
   height: 100%;
   gap: 5px;
 }
-
-.ExperienceTitle {
+.ExperienceSection .Experience .ExperienceTitle {
   font-size: 24px;
   font-weight: bold;
 }
-
-.ExperienceDetail {
+.ExperienceSection .Experience .ExperienceDetail {
   text-align: center;
 }
 
@@ -235,8 +220,7 @@
   justify-content: center;
   gap: 10px;
 }
-
-.Stacks {
+.StackContent .Stacks {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -247,31 +231,29 @@
   width: 25rem;
   transition: height 1s ease;
   border-radius: 20px;
+  box-shadow: 0px 0px 5px var(--color-secondary);
 }
-
-@media (max-width: 768px) {
-  .StackContent {
-    flex-direction: column;
-  }
-  .Stacks {
-    width: 100%;
-  }
-}
-.StacksTitle {
-  color: var(--color-primary);
-  font-size: 20px;
-  text-align: center;
-}
-
-.StacksDetail {
+.StackContent .Stacks .StacksDetail {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-
-.StacksDescription {
+.StackContent .Stacks .StacksTitle {
+  color: var(--color-primary);
+  font-size: 20px;
+  text-align: center;
+}
+.StackContent .Stacks .arrow-down {
+  border: solid var(--color-primary);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(45deg);
+}
+.StackContent .StacksDescription {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -292,17 +274,22 @@
   align-items: center;
   margin-top: 10px;
   border-radius: 20px;
+  box-shadow: 0px 0px 5px var(--color-secondary);
+}
+.StackDetailSection .StacksTitle {
+  color: var(--color-primary);
+  font-size: 20px;
+  text-align: center;
 }
 
-.arrow-down {
-  border: solid var(--color-primary);
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(45deg);
+@media (max-width: 768px) {
+  .StackContent {
+    flex-direction: column;
+  }
+  .Stacks {
+    width: 100%;
+  }
 }
-
 /* ===== PROJECTS ===== */
 .Projects-list {
   display: flex;
@@ -313,43 +300,37 @@
   margin: auto;
   gap: 40px;
 }
-
-.Project {
+.Projects-list .Project {
   background-color: var(--color-secondary);
   padding: 20px;
   width: 20rem;
   height: 10rem;
   cursor: pointer;
   border-radius: 20px;
+  box-shadow: 0px 0px 5px var(--color-secondary);
 }
-
-.Project,
-.Project > * {
+.Projects-list .Project, .Projects-list .Project > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-
-.ProjectTitle {
+.Projects-list .Project .ProjectTitle {
   font-size: 24px;
   color: var(--color-primary);
 }
-
-.ProjectDescription {
+.Projects-list .Project .ProjectDescription {
   text-align: center;
   color: var(--color-primary);
 }
-
-.ProjectTech {
+.Projects-list .Project .ProjectTech {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3px;
 }
-
-.ProjectImage {
+.Projects-list .Project .ProjectImage {
   background-color: white;
   border-radius: 50px;
   width: fit-content;
@@ -359,18 +340,15 @@
   align-items: center;
   padding: 10px;
 }
-
-.ProjectLink {
+.Projects-list .Project .ProjectLink {
   color: var(--color-primary);
   font-weight: bold;
   font-style: italic;
 }
-
-.displayed {
+.Projects-list .Project .displayed {
   display: flex;
 }
-
-.hidden {
+.Projects-list .Project .hidden {
   display: none;
 }
 
@@ -498,7 +476,8 @@ body {
 
 .ContactImage {
   background-color: white;
-  border-radius: 50px;
+  border-radius: 50%;
+  padding: 2px;
   width: 100px;
 }
 
