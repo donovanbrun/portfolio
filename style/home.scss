@@ -1,0 +1,49 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+}
+
+#Hi {
+    margin-right: 100px;
+    color: var(--color-secondary);
+    /* animation-duration: 2s;
+    animation-name: appear; */
+}
+
+#Name {
+    margin-Left: 100px;
+    padding: 5px 10px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border-radius: 20px;
+    /* animation-duration: 3s;
+    animation-name: appear; */
+}
+
+/* @keyframes appear {
+    from {
+        opacity: 0%;
+    }
+  
+    to {
+        opacity: 100%;
+    }
+} */
+
+/* .appear {
+    animation-duration: 2s;
+    animation-name: appear;
+} */
+
+.WelcomeTitle {
+    margin: 10px;
+    font-size: 5vh;
+}
+
+@media (max-width: 768px) {
+
+    #Hi,
+    #Name {
+        margin: 0px;
+    }
+}

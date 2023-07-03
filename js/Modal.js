@@ -16,29 +16,18 @@ export function showModal(content) {
 }
 
 export function hideModal(event) {
-
-    // If click is on modal
-    const rect = modal.getBoundingClientRect();
-    const divX = rect.left;
-    const divY = rect.top;
-    const divLargeur = rect.width;
-    const divHauteur = rect.height;
-    const x = event.clientX;
-    const y = event.clientY;
-
-    if (x >= divX && x <= divX + divLargeur && y >= divY && y <= divY + divHauteur) {
-        return;
+    // If click is only modal background
+    if (event.target.classList.contains('modal-zone')) {
+        modalZone.animate([
+            { opacity: '1' },
+            { opacity: '0' }
+        ], {
+            duration: 500,
+            fill: 'forwards'
+        });
+        setTimeout(() => {
+            modalZone.style.display = 'none';
+            modal.innerHTML = '';
+        }, 500);
     }
-
-    modalZone.animate([
-        { opacity: '1' },
-        { opacity: '0' }
-    ], {
-        duration: 500,
-        fill: 'forwards'
-    });
-    setTimeout(() => {
-        modalZone.style.display = 'none';
-        modal.innerHTML = '';
-    }, 500);
 }

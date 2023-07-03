@@ -1,0 +1,46 @@
+#Nav {
+    position: fixed;
+    height: 50vh;
+    top: 25vh;
+    left: 1vw;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavItem {
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--color-primary);
+    outline: 1px var(--color-secondary) solid;
+    border-radius: 20px;
+    width: 48px;
+    height: 48px;
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavItem:hover {
+    outline: 2px var(--color-secondary) solid;
+}
+
+.NavItemCurrent {
+    outline: 2px var(--color-secondary) solid;
+    transform: scale(1.2) translate(10px, 0px);
+    transition: transform 0.2s;
+}
+
+.NavIcon {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    #Nav {
+        display: none;
+    }
+}
