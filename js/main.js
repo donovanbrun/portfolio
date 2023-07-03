@@ -50,84 +50,82 @@ const projectsContainer = document.getElementById('ProjectsContainer');
 const contactContainer = document.getElementById('ContactContainer');
 
 window.addEventListener('scroll', () => {
-    if (isInViewport(homeDiv)) {
+    homeInViewport(isInViewport(homeDiv));
+    aboutInViewport(isInViewport(aboutDiv));
+    stackInViewport(isInViewport(stackDiv));
+    projectsInViewport(isInViewport(projectsDiv));
+    contactInViewport(isInViewport(contactDiv));
+});
+
+function homeInViewport(isInViewport) {
+    if (isInViewport) {
         homeNav.classList.add('NavItemCurrent');
-        aboutNav.classList.remove('NavItemCurrent');
-        projectsNav.classList.remove('NavItemCurrent');
-        stackNav.classList.remove('NavItemCurrent');
-        contactNav.classList.remove('NavItemCurrent');
-
-        // aboutContainer.classList.remove('slideLeft');
-        // aboutContainer.classList.add('unslideLeft');
-        // stackContainer.classList.remove('slideRight');
-        // stackContainer.classList.add('unslideRight');
-        // projectsContainer.classList.remove('slideLeft');
-        // projectsContainer.classList.add('unslideLeft');
-        // contactContainer.classList.remove('slideRight');
-        // contactContainer.classList.add('unslideRight');
     }
-    else if (isInViewport(aboutDiv)) {
+    else {
         homeNav.classList.remove('NavItemCurrent');
-        aboutNav.classList.add('NavItemCurrent');
-        projectsNav.classList.remove('NavItemCurrent');
-        stackNav.classList.remove('NavItemCurrent');
-        contactNav.classList.remove('NavItemCurrent');
+    }
+}
 
+function aboutInViewport(isInViewport) {
+    if (isInViewport) {
+        aboutNav.classList.add('NavItemCurrent');
         // aboutContainer.classList.remove('unslideLeft');
         // aboutContainer.classList.add('slideLeft');
-        // stackContainer.classList.remove('slideRight');
-        // stackContainer.classList.add('unslideRight');
-        // projectsContainer.classList.remove('slideLeft');
-        // projectsContainer.classList.add('unslideLeft');
-        // contactContainer.classList.remove('slideRight');
-        // contactContainer.classList.add('unslideRight');
     }
-    else if (isInViewport(stackDiv)) {
-        homeNav.classList.remove('NavItemCurrent');
+    else {
         aboutNav.classList.remove('NavItemCurrent');
-        projectsNav.classList.remove('NavItemCurrent');
-        stackNav.classList.add('NavItemCurrent');
-        contactNav.classList.remove('NavItemCurrent');
-
         // aboutContainer.classList.remove('slideLeft');
-        // aboutContainer.classList.add('unslideLeft');
+        //aboutContainer.classList.add('unslideLeft');
+    }
+}
+
+function stackInViewport(isInViewport) {
+    if (isInViewport) {
+        stackNav.classList.add('NavItemCurrent');
         // stackContainer.classList.remove('unslideRight');
         // stackContainer.classList.add('slideRight');
-        // projectsContainer.classList.remove('slideLeft');
-        // projectsContainer.classList.add('unslideLeft');
-        // contactContainer.classList.remove('slideRight');
-        // contactContainer.classList.add('unslideRight');
     }
-    else if (isInViewport(projectsDiv)) {
-        homeNav.classList.remove('NavItemCurrent');
-        aboutNav.classList.remove('NavItemCurrent');
-        projectsNav.classList.add('NavItemCurrent');
+    else {
         stackNav.classList.remove('NavItemCurrent');
-        contactNav.classList.remove('NavItemCurrent');
-
-        // aboutContainer.classList.remove('slideLeft');
-        // aboutContainer.classList.add('unslideLeft');
         // stackContainer.classList.remove('slideRight');
         // stackContainer.classList.add('unslideRight');
+    }
+}
+
+function projectsInViewport(isInViewport) {
+    if (isInViewport) {
+        projectsNav.classList.add('NavItemCurrent');
         // projectsContainer.classList.remove('unslideLeft');
         // projectsContainer.classList.add('slideLeft');
-        // contactContainer.classList.remove('slideRight');
-        // contactContainer.classList.add('unslideRight');
     }
-    else if (isInViewport(contactDiv)) {
-        homeNav.classList.remove('NavItemCurrent');
-        aboutNav.classList.remove('NavItemCurrent');
+    else {
         projectsNav.classList.remove('NavItemCurrent');
-        stackNav.classList.remove('NavItemCurrent');
-        contactNav.classList.add('NavItemCurrent');
-
-        // aboutContainer.classList.remove('slideLeft');
-        // aboutContainer.classList.add('unslideLeft');
-        // stackContainer.classList.remove('slideRight');
-        // stackContainer.classList.add('unslideRight');
         // projectsContainer.classList.remove('slideLeft');
         // projectsContainer.classList.add('unslideLeft');
+    }
+}
+
+function contactInViewport(isInViewport) {
+    if (isInViewport) {
+        contactNav.classList.add('NavItemCurrent');
         // contactContainer.classList.remove('unslideRight');
         // contactContainer.classList.add('slideRight');
     }
-});
+    else {
+        contactNav.classList.remove('NavItemCurrent');
+        // contactContainer.classList.remove('slideRight');
+        // contactContainer.classList.add('unslideRight');
+    }
+}
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+const STAR_COUNT = 100
+let result = ""
+for(let i = 0; i < STAR_COUNT; i++){
+    result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 3)}px ${randomNumber(0, 3)}px #fff,`
+}
+const background = document.getElementById('background');
+background.style.boxShadow = result.substring(0, result.length - 1);

@@ -407,11 +407,31 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
 }
 
+#background {
+  z-index: -1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  width: 1px;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: zoom 16s alternate infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
 .Page {
-  background-color: var(--color-primary);
+  background-color: transparent;
   scroll-snap-align: start;
   height: 100vh;
   display: flex;
