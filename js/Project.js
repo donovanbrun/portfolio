@@ -23,7 +23,7 @@ export class ProjectCard extends HTMLElement {
             <p class="ProjectDescription">${detail}</p>
             <div class="ProjectTech">
             </div>
-            <a class="ProjectLink" target="_blank">See more</a>
+            <p class="ProjectLink">See more</p>
           </div>
         </div>
         `;
