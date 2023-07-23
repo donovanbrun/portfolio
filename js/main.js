@@ -44,10 +44,10 @@ const stackNav = document.getElementById('NavStack');
 const projectsNav = document.getElementById('NavProjects');
 const contactNav = document.getElementById('NavContact');
 
-const aboutContainer = document.getElementById('AboutContainer');
-const stackContainer = document.getElementById('StackContainer');
-const projectsContainer = document.getElementById('ProjectsContainer');
-const contactContainer = document.getElementById('ContactContainer');
+// const aboutContainer = document.getElementById('AboutContainer');
+// const stackContainer = document.getElementById('StackContainer');
+// const projectsContainer = document.getElementById('ProjectsContainer');
+// const contactContainer = document.getElementById('ContactContainer');
 
 window.addEventListener('scroll', () => {
     homeInViewport(isInViewport(homeDiv));

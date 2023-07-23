@@ -356,6 +356,7 @@
 @font-face {
   font-family: "RobotoLocal";
   src: url("../font/Roboto-Regular.ttf");
+  font-display: swap;
 }
 :root {
   --color-primary: white;
