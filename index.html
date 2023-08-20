@@ -5,12 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="build/style.css">
+    <link rel="preload" as="font" href="font/Roboto-Regular.ttf" type="font/ttf" crossorigin/>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
     <title>Donovan Brun</title>
+    <meta name="Description" content="Hi! I'm Donovan Brun, a French software engineer apprentice, due to graduate in 2024.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1XM8J3VPW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S1XM8J3VPW');
+    </script>
 </head>
 
 <body>
-    <button class="DarkModeBtn" onclick="darkmode()"></button>
+    <div id="background"></div>
+    <button id="DarkModeBtn" title="Darkmode"></button>
+    <div class="modal-zone">
+        <div class="modal"></div>
+    </div>
+
+    <div id="Nav">
+        <a class="NavItem NavItemCurrent" id="NavHome" href="#Home" title="Home">
+            <img class="NavIcon" src="img/icon/home.svg" alt="home" width="24px">
+        </a>
+        <a class="NavItem" id="NavAbout" href="#About" title="About">
+            <img class="NavIcon" src="img/icon/about.svg" alt="about" width="24px">
+        </a>
+        <a class="NavItem" id="NavStack" href="#Stack" title="Stack">
+            <img class="NavIcon" src="img/icon/stack.svg" alt="stack" width="24px">
+        </a>
+        <a class="NavItem" id="NavProjects" href="#Projects" title="Projects">
+            <img class="NavIcon" src="img/icon/project.svg" alt="project" width="24px">
+        </a>
+        <a class="NavItem" id="NavContact" href="#Contact" title="Contact">
+            <img class="NavIcon" src="img/icon/contact.svg" alt="contact" width="24px">
+        </a>
+    </div>
+
     <div class="Home Page" id="Home">
         <div>
             <p id='Hi' class='WelcomeTitle'>Hi, I'm</p>
@@ -18,109 +54,117 @@
         </div>
     </div>
 
-    <div class='Page'>
-        <div class="Container Background2" id="About">
+    <div class='Page' id="About">
+        <div class="Container" id="AboutContainer">
             <h1 class="Title">I'm a French software engineer</h1>
-            <div class='AboutContent'>
-                <p class='AboutText1'>2019-2021 <br> IUT Vannes</p>
-                <i class="arrow"></i>
-                <p class='AboutText1'>2021-2024 <br> IMT Atlantique</p>
-                <i class="arrow"></i>
-                <p class='AboutText1'>2021-Now <br> Capgemini - apprenticeship</p>
+            <h2 class="Title AboutTitle">Education</h2>
+            <div class="Timeline">
+                <div class="Timeline_item">
+                    <span class="Timeline_year">2019</span>
+                </div>
+                <div class="Timeline_section">
+                    <div class="Timeline_info">
+                        <span>IUT Vannes</span>
+                    </div>
+                    <div class="Timeline_pin"></div>
+                    <div class="Timeline_line"></div>
+                </div>
+                <div class="Timeline_item">
+                    <span class="Timeline_year">2021</span>
+                </div>
+                <div class="Timeline_section">
+                    <div class="Timeline_info">
+                        <span>IMT Atlantique</span>
+                    </div>
+                    <div class="Timeline_pin"></div>
+                    <div class="Timeline_line"></div>
+                </div>
+                <div class="Timeline_item">
+                    <span class="Timeline_year">2024</span>
+                </div>
+            </div>
+
+            <h2 class="Title AboutTitle">Experience</h2>
+            <div class="ExperienceSection">
+                <experience-card company="IRISA" type="Internship" location="Vannes, France" date="April - June 2021"
+                    detail="Integration of an algorithm developed by IRISA in an open source
+                remote sensing and image processing library named Orfeo Toolbox"></experience-card>
+                <experience-card company="Capgemini" type="Apprenticeship" location="Rennes, France" date="2021-2024"
+                    detail="Fullstack developer and Data engineer"></experience-card>
+                <experience-card company="Handyhand" type="Internship" location="Copenhagen, Denmark"
+                    date="May - August 2023" detail="Fullstack developer"></experience-card>
             </div>
         </div>
     </div>
 
-    <div class='Page'>
-        <div class="Container Background1" id="Stack">
+    <div class='Page' id="Stack">
+        <div class="Container" id="StackContainer">
             <h1 class="Title">My areas of expertise</h1>
             <div class='StackContent'>
-                <div class='Stacks' onmouseenter="show(this)" onmouseleave="show(this)">
-                    <p class='StacksTitle displayed'>Fullstack application</p>
-                    <p class='StacksTitle hidden'>Designing and building application</p>
-                </div>
-                <div class='Stacks' onmouseenter="show(this)" onmouseleave="show(this)">
-                    <p class='StacksTitle displayed'>Data engineering</p>
-                    <p class='StacksTitle hidden'>Data-to-insights transformation</p>
-                </div>
+                <stack-card title="Fullstack application"
+                    description="Designing and building user interface;Building API;Deploying in the cloud"></stack-card>
+                <stack-card title="Data engineering"
+                    description="Data-to-insights transformation;Big Data;Data integration;ETL pattern"></stack-card>
             </div>
+            <div class="StackDetailSection"></div>
         </div>
     </div>
 
-    <div class='Page'>
-        <div class="Container Background2" id="Projects">
+    <div class='Page' id="Projects">
+        <div class="Container" id="ProjectsContainer">
             <h1 class="Title">My projects</h1>
             <div class='Projects-list'>
-
-                <div class="Project" onmouseenter="show(this)" onmouseleave="show(this)">
-                    <div class="displayed">
-                        <h1 class="ProjetTitle">Organizr</h1>
-                        <p class="ProjectDescription">My productivity project</p>
+                <project-card title="Organizr" description="My productivity project" detail="PWA Web application"
+                    link="https://organizr.donovanbrun.com/" tech="react,spring,postgres,docker">
+                    <h1>Organizr</h1>
+                    <h3>A simple web application that I use every day to manage my tasks and take notes.<br>It works both online and offline. Available in PWA.</h3>
+                    <h4>Status : finished</h4>
+                    <div>
+                        <a href="https://github.com/donovanbrun/organizr-front">Github web</a>
+                        <a href="https://github.com/donovanbrun/organizr-back">Github api</a>
                     </div>
-                    <div class="hidden">
-                        <p class="ProjectDescription">Web application</p>
-                        <div>
-                            <img class="ProjectImage" src="img/tech/react.png" alt="react" />
-                            <img class="ProjectImage" src="img/tech/spring.png" alt="spring" />
-                            <img class="ProjectImage" src="img/tech/postgres.png" alt="postgres" />
-                            <img class="ProjectImage" src="img/tech/docker.png" alt="docker" />
-                        </div>
-                        <a href="https://organizr-donovan.vercel.app" class="ProjectLink" target="_blank">Visit</a>
+                    <a href="https://organizr.donovanbrun.com/">Try it now !</a>
+                </project-card>
+                <project-card title="SandWhich" description="Sandwich recipes sharing application" detail="Mobile app"
+                    link="https://github.com/donovanbrun/sandwhich" tech="react-native,gofiber,mongodb">
+                    <h1>SandWhich</h1>
+                    <h3>A mobile application for sharing your best sandwich recipes with others.</h3>
+                    <h4>Status : in progress</h4>
+                    <div>
+                        <a href="https://github.com/donovanbrun/sandwhich">Github mobile app</a>
+                        <a href="https://github.com/donovanbrun/sandwhich-api">Github api</a>
                     </div>
-                </div>
-
-
-                <div class="Project" onmouseenter="show(this)" onmouseleave="show(this)">
-                    <div class="displayed">
-                        <h1 class="ProjetTitle">Alumni FIL</h1>
-                        <p class="ProjectDescription">Webapp for alumni of FIL at IMT Atlantique</p>
-                    </div>
-                    <div class="hidden">
-                        <p class="ProjectDescription">Web application</p>
-                        <div>
-                            <img class="ProjectImage" src="img/tech/angular.png" alt="angular" />
-                            <img class="ProjectImage" src="img/tech/django.png" alt="django" />
-                            <img class="ProjectImage" src="img/tech/postgres.png" alt="postgres" />
-                            <img class="ProjectImage" src="img/tech/docker.png" alt="docker" />
-                        </div>
-                        <a href="https://github.com/donovanbrun/alumni-frontend" class="ProjectLink" target="_blank">See on Github</a>
-                    </div>
-                </div>
-
-
-                <div class="Project" onmouseenter="show(this)" onmouseleave="show(this)">
-                    <div class="displayed">
-                        <h1 class="ProjetTitle">Workflow</h1>
-                        <p class="ProjectDescription">Manage my data</p>
-                    </div>
-                    <div class="hidden">
-                        <p class="ProjectDescription">API and CRON data engineering</p>
-                        <div>
-                            <img class="ProjectImage" src="img/tech/node.png" alt="node" />
-                            <img class="ProjectImage" src="img/tech/express.png" alt="express" />
-                        </div>
-                        <a href="https://github.com/donovanbrun/workflow" class="ProjectLink" target="_blank">See on Github</a>
-                    </div>
-                </div>
+                </project-card>
+                <project-card title="TchouTchou" description="Railway sandbox" detail="Web game"
+                        link="https://tchou-tchou.vercel.app" tech="typescript">
+                    <h1>TchouTchou</h1>
+                    <h3>A web-based sandbox game where you can construct and play with your own railway.</h3>
+                    <h4>We were five working on this project for two months.</h4>
+                    <h4>Status : finished</h4>
+                    <a href="https://tchou-tchou.vercel.app">Try it now !</a>
+                </project-card>
+                <project-card title="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
+                    detail="Web application" link="https://github.com/donovanbrun/alumni-backend"
+                    tech="angular,django,postgres,docker"></project-card>
+                <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering"
+                    link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
             </div>
         </div>
     </div>
 
-    <div class='Page'>
-        <div class="Container Background1" id="Contact">
+    <div class='Page' id="Contact">
+        <div class="Container" id="ContactContainer">
             <h1 class="Title">Contact me</h1>
             <div class='ContactSection'>
                 <a href='https://www.linkedin.com/in/donovan-brun/' target="_blank" rel="noreferrer"><img alt="linkedin"
-                        class="ContactImage" src='img/linkedin.png' /></a>
+                        class="ContactImage" src='img/linkedin.png' width="100px" height="100px" /></a>
                 <a href='https://github.com/donovanbrun' target="_blank" rel="noreferrer"><img alt="github"
-                        class="ContactImage" src='img/github.png' /></a>
+                        class="ContactImage" src='img/github.png' width="100px" height="100px" /></a>
                 <a href='mailto:donovanbrun@gmail.com' target="_blank" rel="noreferrer"><img alt="mail"
-                        class="ContactImage" src='img/mail.png' /></a>
+                        class="ContactImage" src='img/mail.png' width="100px" height="100px" /></a>
             </div>
         </div>
     </div>
 </body>
-
-<script src="js/main.js"></script>
-
+<script type="module" src="js/main.js"></script>
 </html>

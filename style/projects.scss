@@ -1,0 +1,72 @@
+/* ===== PROJECTS ===== */
+
+.Projects-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: auto;
+    gap: 40px;
+
+    .Project {
+        background-color: var(--color-secondary);
+        padding: 20px;
+        width: 20rem;
+        height: 10rem;
+        cursor: pointer;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px var(--color-secondary);
+
+        &,
+        &>* {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ProjectTitle {
+            font-size: 24px;
+            color: var(--color-primary);
+        }
+
+        .ProjectDescription {
+            text-align: center;
+            color: var(--color-primary);
+        }
+
+        .ProjectTech {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .ProjectImage {
+            background-color: white;
+            border-radius: 50px;
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .ProjectLink {
+            color: var(--color-primary);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .displayed {
+            display: flex;
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+}
