@@ -20,12 +20,14 @@
         width: 50vw;
         height: fit-content;
         padding: 30px;
-        background-color: white;
-        border-radius: 20px;
+        background-color: var(--background-color);
+        outline: #66666670 solid 1px;
+        border-radius: 15px;
         z-index: 101;
 
         >* {
             text-align: center;
+            color: white;
         }
 
         a {

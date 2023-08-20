@@ -14,8 +14,10 @@
 }
 
 :root {
+    --background-color: #121212;
     --color-primary: white;
-    --color-secondary: black;
+    --color-secondary: #101010;
+    --title-color: #101010;
 }
 
 * {
@@ -36,7 +38,7 @@ html {
 }
 */
 html::-webkit-scrollbar {
-    background-color: var(--color-primary);
+    background-color: var(--background-color);
     width: 0px;
 }
 
@@ -44,8 +46,18 @@ html::-webkit-scrollbar-thumb {
     background-color: var(--color-secondary);
 }
 
+*::-moz-selection {
+    color: var(--background-color);
+    background: var(--color-primary);
+}
+  
+*::selection {
+    color: var(--background-color);
+    background: var(--color-primary);
+}
+
 body {
-    background-color: var(--color-primary);
+    background-color: var(--background-color);
 }
 
 #background {
@@ -81,7 +93,7 @@ body {
 }
 
 .Title {
-    color: var(--color-secondary);
+    color: var(--title-color);
     text-align: center;
     padding: 10px 30px 30px 30px;
 }
@@ -119,12 +131,8 @@ body {
 
 #DarkModeBtn {
     position: fixed;
-    top: 15px;
-    left: 15px;
-    border-radius: 15px;
-    padding: 15px;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+    top: 20px;
+    left: 20px;
     cursor: pointer;
 }
 
@@ -142,78 +150,4 @@ body {
     border-radius: 50%;
     padding: 2px;
     width: 100px;
-}
-
-/* ===== ANIMATION ===== */
-
-@keyframes slideRight {
-    from {
-        transform: translate(400px, 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideLeft {
-    from {
-        transform: translate(-400px, 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-}
-
-@keyframes unslideRight {
-    from {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-
-    to {
-        transform: translate(400px, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes unslideLeft {
-    from {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-
-    to {
-        transform: translate(-400px, 0);
-        opacity: 0;
-    }
-}
-
-.slideRight {
-    animation-duration: 1s;
-    animation-name: slideRight;
-    opacity: 1;
-}
-
-.slideLeft {
-    animation-duration: 1s;
-    animation-name: slideLeft;
-    opacity: 1;
-}
-
-.unslideRight {
-    animation-duration: 1s;
-    animation-name: unslideRight;
-    opacity: 0;
-}
-
-.unslideLeft {
-    animation-duration: 1s;
-    animation-name: unslideLeft;
-    opacity: 0;
 }

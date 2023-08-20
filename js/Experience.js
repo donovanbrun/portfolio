@@ -10,14 +10,18 @@ export class ExperienceCard extends HTMLElement {
 
         this.innerHTML = `
         <div class="Experience">
-            <div class="displayed">
-                <h1 class="ExperienceTitle">${company}</h1>
-                <p>${type}</p>
-                <p>${location}</p>
-                <p>${date}</p>
+            <div class="ExperienceLogo">
+                <img src="img/${company}.png" alt="${company} logo" width="150px" height="35px">
             </div>
-            <div class="hidden">
-                <p class="ExperienceDetail">${detail}</p>
+            <div class="ExperienceData">
+                <div class="displayed">
+                    <p>${type}</p>
+                    <p>${location}</p>
+                    <p>${date}</p>
+                </div>
+                <div class="hidden">
+                    <p class="ExperienceDetail">${detail}</p>
+                </div>
             </div>
         </div>
         `;
@@ -41,8 +45,8 @@ export class ExperienceCard extends HTMLElement {
     }
 
     show() {
-        const displayedDiv = this.children[0].children[0];
-        const hiddenDiv = this.children[0].children[1];
+        const displayedDiv = this.children[0].children[1].children[0];
+        const hiddenDiv = this.children[0].children[1].children[1];
         const animationSpeed = 500;
 
         if (displayedDiv.style.display === 'none') {

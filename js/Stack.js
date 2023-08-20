@@ -1,5 +1,7 @@
 export class StackCard extends HTMLElement {
 
+    isShown = false;
+
     constructor() {
         super();
 
@@ -7,52 +9,61 @@ export class StackCard extends HTMLElement {
 
         this.innerHTML = `
         <div class='Stacks'>
-            <div class="StacksDetail displayed">
+            <div class="StacksDetail">
                 <p class='StacksTitle'>${title}</p>
-                <i class="arrow-down"></i>
             </div>
         </div>
         `;
     }
 
     connectedCallback() {
-        this.addEventListener('mouseenter', () => this.show());
-        this.addEventListener('mouseleave', () => this.unshow());
+        this.addEventListener('click', () => this.show());
     }
 
     show() {
-        const detailSection = document.querySelector('.StackDetailSection');
-        const desc = this.getAttribute('description');
-        if (desc) {
-            desc.split(';').forEach(d => {
-                let p = document.createElement('p');
-                p.className = "StacksTitle";
-                p.innerHTML = d;
-                detailSection.appendChild(p);
-            });
+        const div = this.children[0];
+        const title = this.getAttribute('title');
+        let description = this.getAttribute('description');
+        description = "<ul>" + description.split(';').map(d => `<li>${d}</li>`).join("<br>") + "</ul>";
+
+        if (!this.isShown) {
+            div.animate([
+                {
+                    height: "5rem"
+                },
+                {
+                    height: "15rem"
+                }
+            ], {
+                duration: 250,
+                easing: 'ease-in-out',
+                fill: 'forwards'
+            }).finished.then(() => {
+                const descDiv = this.querySelector('.StacksTitle');
+                descDiv.innerHTML = description;
+            })
+
+            this.isShown = true;
+            return;
         }
 
-        detailSection.animate([
-            { opacity: '0' },
-            { opacity: '1' }
+        div.animate([
+            {
+                height: "15rem"
+            },
+            {
+                height: "5rem"
+            },
         ], {
-            duration: 500,
+            duration: 250,
             easing: 'ease-in-out',
             fill: 'forwards'
         })
-    }
 
-    unshow() {
-        const detailSection = document.querySelector('.StackDetailSection');
-        detailSection.animate([
-            { opacity: '1' },
-            { opacity: '0' }
-        ], {
-            duration: 500,
-            easing: 'ease-in-out',
-            fill: 'forwards'
-        })
-        detailSection.innerHTML = '';
+        const descDiv = this.querySelector('.StacksTitle');
+        descDiv.innerHTML = title;
+
+        this.isShown = false;
     }
 }
 

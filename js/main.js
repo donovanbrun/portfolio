@@ -1,21 +1,34 @@
+import './Experience.js';
 import './Project.js';
 import './Stack.js';
-import './Experience.js';
 
 var r = document.querySelector(':root')
+
+let dark = true;
+r.style.setProperty('--background-color', '#121212')
 r.style.setProperty('--color-primary', 'white')
-r.style.setProperty('--color-secondary', 'black')
+r.style.setProperty('--color-secondary', '#080808')
+r.style.setProperty('--title-color', 'white')
 
 function darkmode() {
-    var r = document.querySelector(':root')
-    if (r.style.getPropertyValue('--color-primary') === 'white') {
-        r.style.setProperty('--color-primary', 'black')
-        r.style.setProperty('--color-secondary', 'white')
+    if (!dark) {
+        dark = true;
+        r.style.setProperty('--background-color', '#121212')
+        r.style.setProperty('--color-primary', 'white')
+        r.style.setProperty('--color-secondary', '#080808')
+        r.style.setProperty('--title-color', 'white')
     }
     else {
+        dark = false;
+        r.style.setProperty('--background-color', 'white')
         r.style.setProperty('--color-primary', 'white')
-        r.style.setProperty('--color-secondary', 'black')
+        r.style.setProperty('--color-secondary', '#101010')
+        r.style.setProperty('--title-color', '#101010')
     }
+}
+
+function navigate(section) {
+    document.getElementById(section).scrollIntoView({ behavior: "smooth" });
 }
 
 const darkmodeButton = document.getElementById('DarkModeBtn')
@@ -44,10 +57,21 @@ const stackNav = document.getElementById('NavStack');
 const projectsNav = document.getElementById('NavProjects');
 const contactNav = document.getElementById('NavContact');
 
-// const aboutContainer = document.getElementById('AboutContainer');
-// const stackContainer = document.getElementById('StackContainer');
-// const projectsContainer = document.getElementById('ProjectsContainer');
-// const contactContainer = document.getElementById('ContactContainer');
+homeNav.addEventListener('click', () => {
+    navigate("Home");
+});
+aboutNav.addEventListener('click', () => {
+    navigate("About");
+});
+stackNav.addEventListener('click', () => {
+    navigate("Stack");
+});
+projectsNav.addEventListener('click', () => {
+    navigate("Projects");
+});
+contactNav.addEventListener('click', () => {
+    navigate("Contact");
+});
 
 window.addEventListener('scroll', () => {
     homeInViewport(isInViewport(homeDiv));
@@ -69,52 +93,36 @@ function homeInViewport(isInViewport) {
 function aboutInViewport(isInViewport) {
     if (isInViewport) {
         aboutNav.classList.add('NavItemCurrent');
-        // aboutContainer.classList.remove('unslideLeft');
-        // aboutContainer.classList.add('slideLeft');
     }
     else {
         aboutNav.classList.remove('NavItemCurrent');
-        // aboutContainer.classList.remove('slideLeft');
-        //aboutContainer.classList.add('unslideLeft');
     }
 }
 
 function stackInViewport(isInViewport) {
     if (isInViewport) {
         stackNav.classList.add('NavItemCurrent');
-        // stackContainer.classList.remove('unslideRight');
-        // stackContainer.classList.add('slideRight');
     }
     else {
         stackNav.classList.remove('NavItemCurrent');
-        // stackContainer.classList.remove('slideRight');
-        // stackContainer.classList.add('unslideRight');
     }
 }
 
 function projectsInViewport(isInViewport) {
     if (isInViewport) {
         projectsNav.classList.add('NavItemCurrent');
-        // projectsContainer.classList.remove('unslideLeft');
-        // projectsContainer.classList.add('slideLeft');
     }
     else {
         projectsNav.classList.remove('NavItemCurrent');
-        // projectsContainer.classList.remove('slideLeft');
-        // projectsContainer.classList.add('unslideLeft');
     }
 }
 
 function contactInViewport(isInViewport) {
     if (isInViewport) {
         contactNav.classList.add('NavItemCurrent');
-        // contactContainer.classList.remove('unslideRight');
-        // contactContainer.classList.add('slideRight');
     }
     else {
         contactNav.classList.remove('NavItemCurrent');
-        // contactContainer.classList.remove('slideRight');
-        // contactContainer.classList.add('unslideRight');
     }
 }
 
@@ -124,7 +132,7 @@ function randomNumber(min, max) {
 
 const STAR_COUNT = 100
 let result = ""
-for(let i = 0; i < STAR_COUNT; i++){
+for (let i = 0; i < STAR_COUNT; i++) {
     result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 3)}px ${randomNumber(0, 3)}px #fff,`
 }
 const background = document.getElementById('background');

@@ -9,7 +9,7 @@ export function showModal(content) {
         { opacity: '0' },
         { opacity: '1' }
     ], {
-        duration: 500,
+        duration: 250,
         fill: 'forwards'
     });
     modal.innerHTML = content;
@@ -22,7 +22,7 @@ export function hideModal(event) {
             { opacity: '1' },
             { opacity: '0' }
         ], {
-            duration: 500,
+            duration: 250,
             fill: 'forwards'
         });
         setTimeout(() => {

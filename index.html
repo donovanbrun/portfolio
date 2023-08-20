@@ -20,29 +20,30 @@
 
         gtag('config', 'G-S1XM8J3VPW');
     </script>
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
     <div id="background"></div>
-    <button id="DarkModeBtn" title="Darkmode"></button>
+    <img id="DarkModeBtn" class="NavIcon" src="img/icon/moon.svg" alt="home" width="40px">
     <div class="modal-zone">
         <div class="modal"></div>
     </div>
 
     <div id="Nav">
-        <a class="NavItem NavItemCurrent" id="NavHome" href="#Home" title="Home">
+        <a class="NavItem NavItemCurrent" id="NavHome" title="Home">
             <img class="NavIcon" src="img/icon/home.svg" alt="home" width="24px">
         </a>
-        <a class="NavItem" id="NavAbout" href="#About" title="About">
+        <a class="NavItem" id="NavAbout" title="About">
             <img class="NavIcon" src="img/icon/about.svg" alt="about" width="24px">
         </a>
-        <a class="NavItem" id="NavStack" href="#Stack" title="Stack">
+        <a class="NavItem" id="NavStack" title="Stack">
             <img class="NavIcon" src="img/icon/stack.svg" alt="stack" width="24px">
         </a>
-        <a class="NavItem" id="NavProjects" href="#Projects" title="Projects">
+        <a class="NavItem" id="NavProjects" title="Projects">
             <img class="NavIcon" src="img/icon/project.svg" alt="project" width="24px">
         </a>
-        <a class="NavItem" id="NavContact" href="#Contact" title="Contact">
+        <a class="NavItem" id="NavContact" title="Contact">
             <img class="NavIcon" src="img/icon/contact.svg" alt="contact" width="24px">
         </a>
     </div>
@@ -86,13 +87,13 @@
 
             <h2 class="Title AboutTitle">Experience</h2>
             <div class="ExperienceSection">
-                <experience-card company="IRISA" type="Internship" location="Vannes, France" date="April - June 2021"
-                    detail="Integration of an algorithm developed by IRISA in an open source
-                remote sensing and image processing library named Orfeo Toolbox"></experience-card>
-                <experience-card company="Capgemini" type="Apprenticeship" location="Rennes, France" date="2021-2024"
-                    detail="Fullstack developer and Data engineer"></experience-card>
                 <experience-card company="Handyhand" type="Internship" location="Copenhagen, Denmark"
                     date="May - August 2023" detail="Fullstack developer"></experience-card>
+                <experience-card company="Capgemini" type="Apprenticeship" location="Rennes, France" date="2021-2024"
+                    detail="Fullstack developer and Data engineer"></experience-card>
+                <experience-card company="IRISA" type="Internship" location="Vannes, France" date="April - June 2021"
+                    detail="Integration of an algorithm in an open source
+                remote sensing and image processing library"></experience-card>
             </div>
         </div>
     </div>
@@ -101,12 +102,13 @@
         <div class="Container" id="StackContainer">
             <h1 class="Title">My areas of expertise</h1>
             <div class='StackContent'>
-                <stack-card title="Fullstack application"
+                <stack-card title="Backend"
+                    description="Designing and building user interface;Building API;Deploying in the cloud"></stack-card>
+                <stack-card title="Frontend"
                     description="Designing and building user interface;Building API;Deploying in the cloud"></stack-card>
                 <stack-card title="Data engineering"
                     description="Data-to-insights transformation;Big Data;Data integration;ETL pattern"></stack-card>
             </div>
-            <div class="StackDetailSection"></div>
         </div>
     </div>
 
@@ -143,11 +145,11 @@
                     <h4>Status : finished</h4>
                     <a href="https://tchou-tchou.vercel.app">Try it now !</a>
                 </project-card>
+                <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering"
+                    link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
                 <project-card title="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
                     detail="Web application" link="https://github.com/donovanbrun/alumni-backend"
                     tech="angular,django,postgres,docker"></project-card>
-                <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering"
-                    link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
             </div>
         </div>
     </div>
@@ -166,5 +168,5 @@
         </div>
     </div>
 </body>
-<script type="module" src="js/main.js"></script>
+
 </html>

@@ -18,9 +18,20 @@
         border-radius: 50%;
         margin-top: 50px;
         background-color: var(--color-secondary);
+        outline: #66666670 solid 1px;
 
         .Timeline_year {
             color: var(--color-primary);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .Timeline_line {
+            width: 50px;
+        }
+
+        .Timeline_item {
+            margin: 0px;
         }
     }
 
@@ -36,6 +47,12 @@
             background-color: var(--color-secondary);
         }
 
+        @media (max-width: 768px) {
+            .Timeline_line {
+                display: none;
+            }
+        }
+
         .Timeline_pin {
             background-color: var(--color-secondary);
             height: 20px;
@@ -48,8 +65,15 @@
             color: var(--color-primary);
             padding: 5px 10px;
             border-radius: 10px;
+            outline: #66666670 solid 1px;
             text-align: center;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .Timeline {
+        flex-direction: column;
     }
 }
 
@@ -60,22 +84,41 @@
     gap: 20px;
 
     .Experience {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         background-color: var(--color-secondary);
-        color: var(--color-primary);
+        color: white;
         width: 15rem;
         height: 10rem;
-        border-radius: 20px;
-        box-shadow: 0px 0px 5px var(--color-secondary);
+        border-radius: 15px;
+        padding: 4px;
+        outline: #66666670 solid 1px;
+        // box-shadow: 0px 0px 5px var(--color-secondary);
 
-        >* {
+        .ExperienceData {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            width: 100%;
             height: 100%;
-            gap: 5px;
+
+            &>* {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                padding: 15px;
+            }
+        }
+
+        .ExperienceLogo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 11px;
+            background-color: white;
+            padding: 10px;
         }
 
         .ExperienceTitle {
@@ -86,14 +129,18 @@
         .ExperienceDetail {
             text-align: center;
         }
+
+        .displayed {
+            display: flex;
+        }
+
+        .hidden {
+            display: none;
+        }
     }
 }
 
 @media (max-width: 768px) {
-    .Timeline_line {
-        width: 50px;
-    }
-
     .ExperienceSection {
         flex-direction: column;
     }

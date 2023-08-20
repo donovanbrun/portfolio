@@ -5,9 +5,9 @@
 
 #Hi {
     margin-right: 100px;
-    color: var(--color-secondary);
-    /* animation-duration: 2s;
-    animation-name: appear; */
+    color: var(--title-color);
+    animation-duration: 2s;
+    animation-name: appear;
 }
 
 #Name {
@@ -16,19 +16,20 @@
     background-color: var(--color-secondary);
     color: var(--color-primary);
     border-radius: 20px;
-    /* animation-duration: 3s;
-    animation-name: appear; */
+    animation-duration: 3s;
+    animation-name: appear;
+    outline: #66666670 solid 1px;
 }
 
-/* @keyframes appear {
+@keyframes appear {
     from {
         opacity: 0%;
     }
-  
+
     to {
         opacity: 100%;
     }
-} */
+}
 
 /* .appear {
     animation-duration: 2s;
