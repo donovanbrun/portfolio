@@ -2,10 +2,15 @@ import './Experience.js';
 import './Project.js';
 import './Stack.js';
 
+// scroll to bottom
+window.addEventListener('load', () => {
+    window.scrollTo(0, document.body.scrollHeight);
+});
+
 var r = document.querySelector(':root')
 
 let dark = true;
-r.style.setProperty('--background-color', '#121212')
+r.style.setProperty('--background-color', '#101010')
 r.style.setProperty('--color-primary', 'white')
 r.style.setProperty('--color-secondary', '#080808')
 r.style.setProperty('--title-color', 'white')
@@ -13,7 +18,7 @@ r.style.setProperty('--title-color', 'white')
 function darkmode() {
     if (!dark) {
         dark = true;
-        r.style.setProperty('--background-color', '#121212')
+        r.style.setProperty('--background-color', '#101010')
         r.style.setProperty('--color-primary', 'white')
         r.style.setProperty('--color-secondary', '#080808')
         r.style.setProperty('--title-color', 'white')
@@ -48,12 +53,12 @@ function isInViewport(element) {
 const homeDiv = document.getElementById('Home');
 const aboutDiv = document.getElementById('About');
 const projectsDiv = document.getElementById('Projects');
-const stackDiv = document.getElementById('Stack');
+// const stackDiv = document.getElementById('Stack');
 const contactDiv = document.getElementById('Contact');
 
 const homeNav = document.getElementById('NavHome');
 const aboutNav = document.getElementById('NavAbout');
-const stackNav = document.getElementById('NavStack');
+// const stackNav = document.getElementById('NavStack');
 const projectsNav = document.getElementById('NavProjects');
 const contactNav = document.getElementById('NavContact');
 
@@ -63,9 +68,9 @@ homeNav.addEventListener('click', () => {
 aboutNav.addEventListener('click', () => {
     navigate("About");
 });
-stackNav.addEventListener('click', () => {
-    navigate("Stack");
-});
+// stackNav.addEventListener('click', () => {
+//     navigate("Stack");
+// });
 projectsNav.addEventListener('click', () => {
     navigate("Projects");
 });
@@ -74,9 +79,18 @@ contactNav.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
+    // get percentage
+    const scrollPercent = 100 - (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    const gradientPercent = scrollPercent / 100;
+    const red = Math.round(119 - gradientPercent * 119); // Interpolating R value
+    const g = Math.round(181 - gradientPercent * 181); // Interpolating G value
+    const b = Math.round(254 - gradientPercent * 254); // Interpolating B value
+    const color = `rgb(${red},${g},${b})`;
+    r.style.setProperty('--background-color', color);
+
     homeInViewport(isInViewport(homeDiv));
     aboutInViewport(isInViewport(aboutDiv));
-    stackInViewport(isInViewport(stackDiv));
+    // stackInViewport(isInViewport(stackDiv));
     projectsInViewport(isInViewport(projectsDiv));
     contactInViewport(isInViewport(contactDiv));
 });
@@ -99,14 +113,14 @@ function aboutInViewport(isInViewport) {
     }
 }
 
-function stackInViewport(isInViewport) {
-    if (isInViewport) {
-        stackNav.classList.add('NavItemCurrent');
-    }
-    else {
-        stackNav.classList.remove('NavItemCurrent');
-    }
-}
+// function stackInViewport(isInViewport) {
+//     if (isInViewport) {
+//         stackNav.classList.add('NavItemCurrent');
+//     }
+//     else {
+//         stackNav.classList.remove('NavItemCurrent');
+//     }
+// }
 
 function projectsInViewport(isInViewport) {
     if (isInViewport) {

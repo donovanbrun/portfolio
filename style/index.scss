@@ -50,7 +50,7 @@ html::-webkit-scrollbar-thumb {
     color: var(--background-color);
     background: var(--color-primary);
 }
-  
+
 *::selection {
     color: var(--background-color);
     background: var(--color-primary);
@@ -87,9 +87,9 @@ body {
     scroll-snap-align: start;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    padding: 20px;
+
 }
 
 .Title {

@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="build/style.css">
-    <link rel="preload" as="font" href="font/Roboto-Regular.ttf" type="font/ttf" crossorigin/>
+    <link rel="preload" as="font" href="font/Roboto-Regular.ttf" type="font/ttf" crossorigin />
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
     <title>Donovan Brun</title>
-    <meta name="Description" content="Hi! I'm Donovan Brun, a French software engineer apprentice, due to graduate in 2024.">
+    <meta name="Description"
+        content="Hi! I'm Donovan Brun, a French software engineer apprentice, due to graduate in 2024.">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1XM8J3VPW"></script>
@@ -31,127 +32,18 @@
     </div>
 
     <div id="Nav">
-        <a class="NavItem NavItemCurrent" id="NavHome" title="Home">
-            <img class="NavIcon" src="img/icon/home.svg" alt="home" width="24px">
-        </a>
-        <a class="NavItem" id="NavAbout" title="About">
-            <img class="NavIcon" src="img/icon/about.svg" alt="about" width="24px">
-        </a>
-        <a class="NavItem" id="NavStack" title="Stack">
-            <img class="NavIcon" src="img/icon/stack.svg" alt="stack" width="24px">
+        <a class="NavItem" id="NavContact" title="Contact">
+            <img class="NavIcon" src="img/icon/contact.svg" alt="contact" width="24px">
         </a>
         <a class="NavItem" id="NavProjects" title="Projects">
             <img class="NavIcon" src="img/icon/project.svg" alt="project" width="24px">
         </a>
-        <a class="NavItem" id="NavContact" title="Contact">
-            <img class="NavIcon" src="img/icon/contact.svg" alt="contact" width="24px">
+        <a class="NavItem" id="NavAbout" title="About">
+            <img class="NavIcon" src="img/icon/about.svg" alt="about" width="24px">
         </a>
-    </div>
-
-    <div class="Home Page" id="Home">
-        <div>
-            <p id='Hi' class='WelcomeTitle'>Hi, I'm</p>
-            <p id='Name' class="WelcomeTitle">Donovan Brun</p>
-        </div>
-    </div>
-
-    <div class='Page' id="About">
-        <div class="Container" id="AboutContainer">
-            <h1 class="Title">I'm a French software engineer</h1>
-            <h2 class="Title AboutTitle">Education</h2>
-            <div class="Timeline">
-                <div class="Timeline_item">
-                    <span class="Timeline_year">2019</span>
-                </div>
-                <div class="Timeline_section">
-                    <div class="Timeline_info">
-                        <span>IUT Vannes</span>
-                    </div>
-                    <div class="Timeline_pin"></div>
-                    <div class="Timeline_line"></div>
-                </div>
-                <div class="Timeline_item">
-                    <span class="Timeline_year">2021</span>
-                </div>
-                <div class="Timeline_section">
-                    <div class="Timeline_info">
-                        <span>IMT Atlantique</span>
-                    </div>
-                    <div class="Timeline_pin"></div>
-                    <div class="Timeline_line"></div>
-                </div>
-                <div class="Timeline_item">
-                    <span class="Timeline_year">2024</span>
-                </div>
-            </div>
-
-            <h2 class="Title AboutTitle">Experience</h2>
-            <div class="ExperienceSection">
-                <experience-card company="Handyhand" type="Internship" location="Copenhagen, Denmark"
-                    date="May - August 2023" detail="Fullstack developer"></experience-card>
-                <experience-card company="Capgemini" type="Apprenticeship" location="Rennes, France" date="2021-2024"
-                    detail="Fullstack developer and Data engineer"></experience-card>
-                <experience-card company="IRISA" type="Internship" location="Vannes, France" date="April - June 2021"
-                    detail="Integration of an algorithm in an open source
-                remote sensing and image processing library"></experience-card>
-            </div>
-        </div>
-    </div>
-
-    <div class='Page' id="Stack">
-        <div class="Container" id="StackContainer">
-            <h1 class="Title">My areas of expertise</h1>
-            <div class='StackContent'>
-                <stack-card title="Backend"
-                    description="Designing and building user interface;Building API;Deploying in the cloud"></stack-card>
-                <stack-card title="Frontend"
-                    description="Designing and building user interface;Building API;Deploying in the cloud"></stack-card>
-                <stack-card title="Data engineering"
-                    description="Data-to-insights transformation;Big Data;Data integration;ETL pattern"></stack-card>
-            </div>
-        </div>
-    </div>
-
-    <div class='Page' id="Projects">
-        <div class="Container" id="ProjectsContainer">
-            <h1 class="Title">My projects</h1>
-            <div class='Projects-list'>
-                <project-card title="Organizr" description="My productivity project" detail="PWA Web application"
-                    link="https://organizr.donovanbrun.com/" tech="react,spring,postgres,docker">
-                    <h1>Organizr</h1>
-                    <h3>A simple web application that I use every day to manage my tasks and take notes.<br>It works both online and offline. Available in PWA.</h3>
-                    <h4>Status : finished</h4>
-                    <div>
-                        <a href="https://github.com/donovanbrun/organizr-front">Github web</a>
-                        <a href="https://github.com/donovanbrun/organizr-back">Github api</a>
-                    </div>
-                    <a href="https://organizr.donovanbrun.com/">Try it now !</a>
-                </project-card>
-                <project-card title="SandWhich" description="Sandwich recipes sharing application" detail="Mobile app"
-                    link="https://github.com/donovanbrun/sandwhich" tech="react-native,gofiber,mongodb">
-                    <h1>SandWhich</h1>
-                    <h3>A mobile application for sharing your best sandwich recipes with others.</h3>
-                    <h4>Status : in progress</h4>
-                    <div>
-                        <a href="https://github.com/donovanbrun/sandwhich">Github mobile app</a>
-                        <a href="https://github.com/donovanbrun/sandwhich-api">Github api</a>
-                    </div>
-                </project-card>
-                <project-card title="TchouTchou" description="Railway sandbox" detail="Web game"
-                        link="https://tchou-tchou.vercel.app" tech="typescript">
-                    <h1>TchouTchou</h1>
-                    <h3>A web-based sandbox game where you can construct and play with your own railway.</h3>
-                    <h4>We were five working on this project for two months.</h4>
-                    <h4>Status : finished</h4>
-                    <a href="https://tchou-tchou.vercel.app">Try it now !</a>
-                </project-card>
-                <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering"
-                    link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
-                <project-card title="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
-                    detail="Web application" link="https://github.com/donovanbrun/alumni-backend"
-                    tech="angular,django,postgres,docker"></project-card>
-            </div>
-        </div>
+        <a class="NavItem NavItemCurrent" id="NavHome" title="Home">
+            <img class="NavIcon" src="img/icon/home.svg" alt="home" width="24px">
+        </a>
     </div>
 
     <div class='Page' id="Contact">
@@ -166,6 +58,85 @@
                         class="ContactImage" src='img/mail.png' width="100px" height="100px" /></a>
             </div>
         </div>
+    </div>
+
+    <div class='Page' id="Projects">
+        <div class="Container" id="ProjectsContainer">
+            <h1 class="Title">My projects</h1>
+            <div class='Projects-list'>
+                <project-card title="Organizr" description="My productivity project" detail="PWA Web application"
+                    link="https://organizr.donovanbrun.com/" tech="react,spring,postgres,docker">
+                    <h1>Organizr</h1>
+                    <h3>A simple web application that I use every day to manage my tasks and take notes.<br>It works
+                        both online and offline. Available in PWA.</h3>
+                    <h4>Status : finished</h4>
+                    <div>
+                        <a href="https://github.com/donovanbrun/organizr-front" target="_blank">Github web</a>
+                        <a href="https://github.com/donovanbrun/organizr-back" target="_blank">Github api</a>
+                    </div>
+                    <a href="https://organizr.donovanbrun.com/" target="_blank">Try it now !</a>
+                </project-card>
+                <project-card title="SandWhich" description="Sandwich recipes sharing application" detail="Mobile app"
+                    link="https://github.com/donovanbrun/sandwhich" tech="react-native,gofiber,mongodb">
+                    <h1>SandWhich</h1>
+                    <h3>A mobile application for sharing your best sandwich recipes with others.</h3>
+                    <h4>Status : in progress</h4>
+                    <div>
+                        <a href="https://github.com/donovanbrun/sandwhich" target="_blank">Github mobile app</a>
+                        <a href="https://github.com/donovanbrun/sandwhich-api" target="_blank">Github api</a>
+                    </div>
+                </project-card>
+                <project-card title="TchouTchou" description="Railway sandbox" detail="Web game"
+                    link="https://tchou-tchou.vercel.app" tech="typescript">
+                    <h1>TchouTchou</h1>
+                    <h3>A web-based sandbox game where you can construct and play with your own railway.</h3>
+                    <h4>We were five working on this project for two months.</h4>
+                    <h4>Status : finished</h4>
+                    <a href="https://tchou-tchou.vercel.app" target="_blank">Try it now !</a>
+                </project-card>
+                <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering"
+                    link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
+                <project-card title="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
+                    detail="Web application" link="https://github.com/donovanbrun/alumni-backend"
+                    tech="angular,django,postgres,docker"></project-card>
+            </div>
+        </div>
+    </div>
+
+    <div class='Page' id="About">
+        <div class="Container" id="AboutContainer">
+            <h1 class="Title">About me</h1>
+            <div class="AboutSection">
+                <div class="AboutText">
+                    <p>
+                        I'm a French apprentice software engineer working towards a master's degree. <br>
+                        My background includes stints at a research lab (IRISA) and a startup (Handyhand). <br>
+                        Currently, I'm apprenticing at Capgemini.
+                    </p>
+
+                    <p>
+                        I specialize in web application development, covering both
+                        <span class="highlight">frontend</span>
+                        and
+                        <span class="highlight">backend</span>,
+                        <br>
+                        and I also possess skills in
+                        <span class="highlight">data engineering</span>.
+                    </p>
+                    <p>
+                        My aspiration is to craft solutions that directly impact users.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Home Page" id="Home">
+        <div>
+            <p id='Hi' class='WelcomeTitle'>Hi, I'm</p>
+            <p id='Name' class="WelcomeTitle">Donovan Brun</p>
+        </div>
+        <div style="width: 100vw; height: 10vh; background-color: green;"></div>
     </div>
 </body>
 
