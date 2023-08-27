@@ -2,12 +2,27 @@ import './Experience.js';
 import './Project.js';
 import './Stack.js';
 
+const r = document.querySelector(':root')
+
+const homeDiv = document.getElementById('Home');
+const aboutDiv = document.getElementById('About');
+const projectsDiv = document.getElementById('Projects');
+const contactDiv = document.getElementById('Contact');
+
+const homeNav = document.getElementById('NavHome');
+const aboutNav = document.getElementById('NavAbout');
+const projectsNav = document.getElementById('NavProjects');
+const contactNav = document.getElementById('NavContact');
+
+const darkmodeButton = document.getElementById('DarkModeBtn');
+
+const background = document.getElementById('background');
+const cloud = document.getElementById('cloud');
+
 // scroll to bottom
 window.addEventListener('load', () => {
     window.scrollTo(0, document.body.scrollHeight);
 });
-
-var r = document.querySelector(':root')
 
 let dark = true;
 r.style.setProperty('--background-color', '#101010')
@@ -31,13 +46,12 @@ function darkmode() {
         r.style.setProperty('--title-color', '#101010')
     }
 }
+// darkmodeButton.addEventListener('click', darkmode)
 
 function navigate(section) {
     document.getElementById(section).scrollIntoView({ behavior: "smooth" });
 }
 
-const darkmodeButton = document.getElementById('DarkModeBtn')
-darkmodeButton.addEventListener('click', darkmode)
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -50,17 +64,6 @@ function isInViewport(element) {
     return midpointX >= 0 && midpointX <= windowWidth && midpointY >= 0 && midpointY <= windowHeight;
 }
 
-const homeDiv = document.getElementById('Home');
-const aboutDiv = document.getElementById('About');
-const projectsDiv = document.getElementById('Projects');
-// const stackDiv = document.getElementById('Stack');
-const contactDiv = document.getElementById('Contact');
-
-const homeNav = document.getElementById('NavHome');
-const aboutNav = document.getElementById('NavAbout');
-// const stackNav = document.getElementById('NavStack');
-const projectsNav = document.getElementById('NavProjects');
-const contactNav = document.getElementById('NavContact');
 
 homeNav.addEventListener('click', () => {
     navigate("Home");
@@ -68,15 +71,13 @@ homeNav.addEventListener('click', () => {
 aboutNav.addEventListener('click', () => {
     navigate("About");
 });
-// stackNav.addEventListener('click', () => {
-//     navigate("Stack");
-// });
 projectsNav.addEventListener('click', () => {
     navigate("Projects");
 });
 contactNav.addEventListener('click', () => {
     navigate("Contact");
 });
+
 
 window.addEventListener('scroll', () => {
     // get percentage
@@ -90,9 +91,10 @@ window.addEventListener('scroll', () => {
 
     homeInViewport(isInViewport(homeDiv));
     aboutInViewport(isInViewport(aboutDiv));
-    // stackInViewport(isInViewport(stackDiv));
     projectsInViewport(isInViewport(projectsDiv));
     contactInViewport(isInViewport(contactDiv));
+    background.style.opacity = scrollPercent / 100;
+    cloud.style.opacity = 0.5 - (scrollPercent / 100);
 });
 
 function homeInViewport(isInViewport) {
@@ -112,15 +114,6 @@ function aboutInViewport(isInViewport) {
         aboutNav.classList.remove('NavItemCurrent');
     }
 }
-
-// function stackInViewport(isInViewport) {
-//     if (isInViewport) {
-//         stackNav.classList.add('NavItemCurrent');
-//     }
-//     else {
-//         stackNav.classList.remove('NavItemCurrent');
-//     }
-// }
 
 function projectsInViewport(isInViewport) {
     if (isInViewport) {
@@ -144,10 +137,9 @@ function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-const STAR_COUNT = 100
-let result = ""
+const STAR_COUNT = 100;
+let result = "";
 for (let i = 0; i < STAR_COUNT; i++) {
-    result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 3)}px ${randomNumber(0, 3)}px #fff,`
+    result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 3)}px ${randomNumber(0, 3)}px #fff,`;
 }
-const background = document.getElementById('background');
 background.style.boxShadow = result.substring(0, result.length - 1);
