@@ -95,19 +95,22 @@
   flex-direction: column;
   justify-content: end !important;
 }
-
-#Hi {
+.Home .Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Home .Info #Hi {
   margin-right: 100px;
   color: var(--title-color);
   animation-duration: 2s;
   animation-name: appear;
 }
-
-#Name {
+.Home .Info #Name {
   margin-Left: 100px;
   padding: 5px 10px;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: white;
+  color: black;
   border-radius: 20px;
   animation-duration: 3s;
   animation-name: appear;
@@ -148,9 +151,9 @@
   gap: 20px;
 }
 .AboutText > p {
-  color: var(--color-primary);
+  color: black;
   font-size: 22px;
-  background-color: black;
+  background-color: white;
   padding: 15px;
   outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
 }
@@ -440,15 +443,21 @@ body {
 }
 
 #cloud {
-  position: fixed;
-  left: 100px;
-  top: 100px;
   width: 300px;
   height: 100px;
   background-color: white;
   border-radius: 50px;
+  animation: moveClouds 10s linear infinite alternate;
 }
 
+@keyframes moveClouds {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 /* ===== CONTACT ===== */
 .ContactSection {
   display: flex;

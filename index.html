@@ -26,13 +26,12 @@
 
 <body>
     <div id="background"></div>
-    <div id="cloud""></div>
     <img id=" DarkModeBtn" class="NavIcon" src="img/icon/moon.svg" alt="home" width="40px" />
     <div class="modal-zone">
         <div class="modal"></div>
     </div>
 
-    <div id="Nav">
+    <!-- <div id="Nav">
         <a class="NavItem" id="NavContact" title="Contact">
             <img class="NavIcon" src="img/icon/contact.svg" alt="contact" width="24px">
         </a>
@@ -45,7 +44,7 @@
         <a class="NavItem NavItemCurrent" id="NavHome" title="Home">
             <img class="NavIcon" src="img/icon/home.svg" alt="home" width="24px">
         </a>
-    </div>
+    </div> -->
 
     <div class='Page' id="Contact">
         <div class="Container" id="ContactContainer">
@@ -65,7 +64,7 @@
         <div class="Container" id="ProjectsContainer">
             <h1 class="Title">My projects</h1>
             <div class='Projects-list'>
-                <project-card title="Organizr" description="My productivity project" detail="PWA Web application"
+                <project-card name="Organizr" description="My productivity project" detail="PWA Web application"
                     link="https://organizr.donovanbrun.com/" tech="react,spring,postgres,docker">
                     <h1>Organizr</h1>
                     <h3>A simple web application that I use every day to manage my tasks and take notes.<br>It works
@@ -77,7 +76,7 @@
                     </div>
                     <a href="https://organizr.donovanbrun.com/" target="_blank">Try it now !</a>
                 </project-card>
-                <project-card title="SandWhich" description="Sandwich recipes sharing application" detail="Mobile app"
+                <project-card name="SandWhich" description="Sandwich recipes sharing application" detail="Mobile app"
                     link="https://github.com/donovanbrun/sandwhich" tech="react-native,gofiber,mongodb">
                     <h1>SandWhich</h1>
                     <h3>A mobile application for sharing your best sandwich recipes with others.</h3>
@@ -87,7 +86,7 @@
                         <a href="https://github.com/donovanbrun/sandwhich-api" target="_blank">Github api</a>
                     </div>
                 </project-card>
-                <project-card title="TchouTchou" description="Railway sandbox" detail="Web game"
+                <project-card name="TchouTchou" description="Railway sandbox" detail="Web game"
                     link="https://tchou-tchou.vercel.app" tech="typescript">
                     <h1>TchouTchou</h1>
                     <h3>A web-based sandbox game where you can construct and play with your own railway.</h3>
@@ -95,9 +94,9 @@
                     <h4>Status : finished</h4>
                     <a href="https://tchou-tchou.vercel.app" target="_blank">Try it now !</a>
                 </project-card>
-                <project-card title="Workflow" description="Manage my data" detail="API and CRON data engineering"
+                <project-card name="Workflow" description="Manage my data" detail="API and CRON data engineering"
                     link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
-                <project-card title="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
+                <project-card name="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
                     detail="Web application" link="https://github.com/donovanbrun/alumni-backend"
                     tech="angular,django,postgres,docker"></project-card>
             </div>
@@ -133,8 +132,9 @@
     </div>
 
     <div class="Home Page" id="Home">
+        <div id="cloud""></div>
         <h1>Scroll to the top !</h1>
-        <div>
+        <div class=" Info">
             <p id='Hi' class='WelcomeTitle'>Hi, I'm</p>
             <p id='Name' class="WelcomeTitle">Donovan Brun</p>
         </div>

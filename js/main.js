@@ -9,10 +9,10 @@ const aboutDiv = document.getElementById('About');
 const projectsDiv = document.getElementById('Projects');
 const contactDiv = document.getElementById('Contact');
 
-const homeNav = document.getElementById('NavHome');
-const aboutNav = document.getElementById('NavAbout');
-const projectsNav = document.getElementById('NavProjects');
-const contactNav = document.getElementById('NavContact');
+// const homeNav = document.getElementById('NavHome');
+// const aboutNav = document.getElementById('NavAbout');
+// const projectsNav = document.getElementById('NavProjects');
+// const contactNav = document.getElementById('NavContact');
 
 const darkmodeButton = document.getElementById('DarkModeBtn');
 
@@ -65,18 +65,18 @@ function isInViewport(element) {
 }
 
 
-homeNav.addEventListener('click', () => {
-    navigate("Home");
-});
-aboutNav.addEventListener('click', () => {
-    navigate("About");
-});
-projectsNav.addEventListener('click', () => {
-    navigate("Projects");
-});
-contactNav.addEventListener('click', () => {
-    navigate("Contact");
-});
+// homeNav.addEventListener('click', () => {
+//     navigate("Home");
+// });
+// aboutNav.addEventListener('click', () => {
+//     navigate("About");
+// });
+// projectsNav.addEventListener('click', () => {
+//     navigate("Projects");
+// });
+// contactNav.addEventListener('click', () => {
+//     navigate("Contact");
+// });
 
 
 window.addEventListener('scroll', () => {
@@ -89,10 +89,10 @@ window.addEventListener('scroll', () => {
     const color = `rgb(${red},${g},${b})`;
     r.style.setProperty('--background-color', color);
 
-    homeInViewport(isInViewport(homeDiv));
-    aboutInViewport(isInViewport(aboutDiv));
-    projectsInViewport(isInViewport(projectsDiv));
-    contactInViewport(isInViewport(contactDiv));
+    // homeInViewport(isInViewport(homeDiv));
+    // aboutInViewport(isInViewport(aboutDiv));
+    // projectsInViewport(isInViewport(projectsDiv));
+    // contactInViewport(isInViewport(contactDiv));
     background.style.opacity = scrollPercent / 100;
     cloud.style.opacity = 0.5 - (scrollPercent / 100);
 });
