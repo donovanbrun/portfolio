@@ -7,7 +7,7 @@ export class ProjectCard extends HTMLElement {
     constructor() {
         super();
 
-        const title = this.getAttribute('title');
+        const name = this.getAttribute('name');
         const description = this.getAttribute('description');
         const detail = this.getAttribute('detail');
         const link = this.getAttribute('link');
@@ -16,7 +16,7 @@ export class ProjectCard extends HTMLElement {
         this.innerHTML = `
         <div class="Project">
           <div class="displayed">
-            <h1 class="ProjectTitle">${title}</h1>
+            <h1 class="ProjectTitle">${name}</h1>
             <p class="ProjectDescription">${description}</p>
           </div>
           <div class="hidden">

@@ -1,34 +1,42 @@
 .Home {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+    .Info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        #Hi {
+            margin-right: 100px;
+            color: white;
+            animation-duration: 0.5s;
+            animation: appear 0.5s ease-in-out;
+        }
+
+        #Name {
+            margin-Left: 100px;
+            padding: 5px 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: rgb(54, 202, 252);
+            border-radius: 20px;
+            animation: appear 1s ease-in-out;
+        }
+    }
 }
 
-#Hi {
-    margin-right: 100px;
-    color: var(--color-secondary);
-    /* animation-duration: 2s;
-    animation-name: appear; */
-}
-
-#Name {
-    margin-Left: 100px;
-    padding: 5px 10px;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    border-radius: 20px;
-    /* animation-duration: 3s;
-    animation-name: appear; */
-}
-
-/* @keyframes appear {
+@keyframes appear {
     from {
         opacity: 0%;
+        scale: 0;
     }
-  
+
     to {
         opacity: 100%;
+        scale: 1;
     }
-} */
+}
 
 /* .appear {
     animation-duration: 2s;

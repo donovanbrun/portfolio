@@ -13,18 +13,19 @@
     .NavItem {
         text-decoration: none;
         text-align: center;
-        background-color: white;
-        outline: 1px var(--color-secondary) solid;
+        background-color: rgba($color: #ffffff, $alpha: 0.3);
+        outline: 1px white solid;
         border-radius: 20px;
         width: 48px;
         height: 48px;
-        color: var(--color-primary);
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
 
         &:hover {
-            outline: 2px var(--color-secondary) solid;
+            outline: 2px white solid;
         }
 
         .NavIcon {
@@ -34,7 +35,7 @@
     }
 
     .NavItemCurrent {
-        outline: 2px var(--color-secondary) solid;
+        outline: 2px white solid;
         transform: scale(1.2) translate(10px, 0px);
         transition: transform 0.2s;
     }

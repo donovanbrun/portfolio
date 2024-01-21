@@ -10,13 +10,13 @@
     gap: 40px;
 
     .Project {
-        background-color: var(--color-secondary);
+        background-color: rgba(0, 4, 80, 0.5);
         padding: 20px;
         width: 20rem;
         height: 10rem;
         cursor: pointer;
-        border-radius: 20px;
-        box-shadow: 0px 0px 5px var(--color-secondary);
+        border-radius: 15px;
+        outline: #66666670 solid 1px;
 
         &,
         &>* {
@@ -29,12 +29,12 @@
 
         .ProjectTitle {
             font-size: 24px;
-            color: var(--color-primary);
+            color: white;
         }
 
         .ProjectDescription {
             text-align: center;
-            color: var(--color-primary);
+            color: white;
         }
 
         .ProjectTech {
@@ -56,7 +56,7 @@
         }
 
         .ProjectLink {
-            color: var(--color-primary);
+            color: white;
             font-weight: bold;
             font-style: italic;
         }

@@ -1,25 +1,26 @@
-import './Project.js';
-import './Stack.js';
 import './Experience.js';
+import './Project.js';
 
-var r = document.querySelector(':root')
-r.style.setProperty('--color-primary', 'white')
-r.style.setProperty('--color-secondary', 'black')
+const homeDiv = document.getElementById('Home');
+const aboutDiv = document.getElementById('About');
+const projectsDiv = document.getElementById('Projects');
+const contactDiv = document.getElementById('Contact');
 
-function darkmode() {
-    var r = document.querySelector(':root')
-    if (r.style.getPropertyValue('--color-primary') === 'white') {
-        r.style.setProperty('--color-primary', 'black')
-        r.style.setProperty('--color-secondary', 'white')
-    }
-    else {
-        r.style.setProperty('--color-primary', 'white')
-        r.style.setProperty('--color-secondary', 'black')
-    }
+const homeNav = document.getElementById('NavHome');
+const aboutNav = document.getElementById('NavAbout');
+const projectsNav = document.getElementById('NavProjects');
+const contactNav = document.getElementById('NavContact');
+
+window.addEventListener('scroll', () => {
+    homeInViewport(isInViewport(homeDiv));
+    aboutInViewport(isInViewport(aboutDiv));
+    projectsInViewport(isInViewport(projectsDiv));
+    contactInViewport(isInViewport(contactDiv));
+});
+
+function navigate(section) {
+    document.getElementById(section).scrollIntoView({ behavior: "smooth" });
 }
-
-const darkmodeButton = document.getElementById('DarkModeBtn')
-darkmodeButton.addEventListener('click', darkmode)
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -32,29 +33,18 @@ function isInViewport(element) {
     return midpointX >= 0 && midpointX <= windowWidth && midpointY >= 0 && midpointY <= windowHeight;
 }
 
-const homeDiv = document.getElementById('Home');
-const aboutDiv = document.getElementById('About');
-const projectsDiv = document.getElementById('Projects');
-const stackDiv = document.getElementById('Stack');
-const contactDiv = document.getElementById('Contact');
 
-const homeNav = document.getElementById('NavHome');
-const aboutNav = document.getElementById('NavAbout');
-const stackNav = document.getElementById('NavStack');
-const projectsNav = document.getElementById('NavProjects');
-const contactNav = document.getElementById('NavContact');
-
-// const aboutContainer = document.getElementById('AboutContainer');
-// const stackContainer = document.getElementById('StackContainer');
-// const projectsContainer = document.getElementById('ProjectsContainer');
-// const contactContainer = document.getElementById('ContactContainer');
-
-window.addEventListener('scroll', () => {
-    homeInViewport(isInViewport(homeDiv));
-    aboutInViewport(isInViewport(aboutDiv));
-    stackInViewport(isInViewport(stackDiv));
-    projectsInViewport(isInViewport(projectsDiv));
-    contactInViewport(isInViewport(contactDiv));
+homeNav.addEventListener('click', () => {
+    navigate("Home");
+});
+aboutNav.addEventListener('click', () => {
+    navigate("About");
+});
+projectsNav.addEventListener('click', () => {
+    navigate("Projects");
+});
+contactNav.addEventListener('click', () => {
+    navigate("Contact");
 });
 
 function homeInViewport(isInViewport) {
@@ -69,63 +59,29 @@ function homeInViewport(isInViewport) {
 function aboutInViewport(isInViewport) {
     if (isInViewport) {
         aboutNav.classList.add('NavItemCurrent');
-        // aboutContainer.classList.remove('unslideLeft');
-        // aboutContainer.classList.add('slideLeft');
+        // aboutDiv.style.animation = 'appear 1s ease-in-out';
     }
     else {
         aboutNav.classList.remove('NavItemCurrent');
-        // aboutContainer.classList.remove('slideLeft');
-        //aboutContainer.classList.add('unslideLeft');
-    }
-}
-
-function stackInViewport(isInViewport) {
-    if (isInViewport) {
-        stackNav.classList.add('NavItemCurrent');
-        // stackContainer.classList.remove('unslideRight');
-        // stackContainer.classList.add('slideRight');
-    }
-    else {
-        stackNav.classList.remove('NavItemCurrent');
-        // stackContainer.classList.remove('slideRight');
-        // stackContainer.classList.add('unslideRight');
     }
 }
 
 function projectsInViewport(isInViewport) {
     if (isInViewport) {
         projectsNav.classList.add('NavItemCurrent');
-        // projectsContainer.classList.remove('unslideLeft');
-        // projectsContainer.classList.add('slideLeft');
+        // projectsDiv.style.animation = 'appear 1s ease-in-out';
     }
     else {
         projectsNav.classList.remove('NavItemCurrent');
-        // projectsContainer.classList.remove('slideLeft');
-        // projectsContainer.classList.add('unslideLeft');
     }
 }
 
 function contactInViewport(isInViewport) {
     if (isInViewport) {
         contactNav.classList.add('NavItemCurrent');
-        // contactContainer.classList.remove('unslideRight');
-        // contactContainer.classList.add('slideRight');
+        // contactDiv.style.animation = 'appear 1s ease-in-out';
     }
     else {
         contactNav.classList.remove('NavItemCurrent');
-        // contactContainer.classList.remove('slideRight');
-        // contactContainer.classList.add('unslideRight');
     }
 }
-
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min
-}
-
-const STAR_COUNT = 100
-let result = ""
-for(let i = 0; i < STAR_COUNT; i++){
-    result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 3)}px ${randomNumber(0, 3)}px #fff,`
-}
-const background = document.getElementById('background');
-background.style.boxShadow = result.substring(0, result.length - 1);
