@@ -1,7 +1,7 @@
 .Home {
     display: flex;
     flex-direction: column;
-    justify-content: end !important;
+    justify-content: center;
 
     .Info {
         display: flex;
@@ -10,20 +10,18 @@
 
         #Hi {
             margin-right: 100px;
-            color: var(--title-color);
-            animation-duration: 2s;
-            animation-name: appear;
+            color: white;
+            animation-duration: 0.5s;
+            animation: appear 0.5s ease-in-out;
         }
 
         #Name {
             margin-Left: 100px;
             padding: 5px 10px;
-            background-color: white;
-            color: black;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: rgb(54, 202, 252);
             border-radius: 20px;
-            animation-duration: 3s;
-            animation-name: appear;
-            outline: #66666670 solid 1px;
+            animation: appear 1s ease-in-out;
         }
     }
 }
@@ -31,10 +29,12 @@
 @keyframes appear {
     from {
         opacity: 0%;
+        scale: 0;
     }
 
     to {
         opacity: 100%;
+        scale: 1;
     }
 }
 

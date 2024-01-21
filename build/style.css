@@ -20,7 +20,7 @@
   width: 50vw;
   height: fit-content;
   padding: 30px;
-  background-color: var(--background-color);
+  background-color: rgba(180, 181, 255, 0.95);
   outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
   border-radius: 15px;
   z-index: 101;
@@ -32,13 +32,13 @@
 .modal-zone .modal a {
   text-decoration: none;
   padding: 10px;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: green;
+  color: white;
   border-radius: 15px;
 }
 .modal-zone .modal a:hover {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+  color: black;
+  background-color: lightgreen;
 }
 
 @media (max-width: 768px) {
@@ -61,7 +61,7 @@
 #Nav .NavItem {
   text-decoration: none;
   text-align: center;
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0.3);
   outline: 1px white solid;
   border-radius: 20px;
   width: 48px;
@@ -93,7 +93,7 @@
 .Home {
   display: flex;
   flex-direction: column;
-  justify-content: end !important;
+  justify-content: center;
 }
 .Home .Info {
   display: flex;
@@ -102,27 +102,27 @@
 }
 .Home .Info #Hi {
   margin-right: 100px;
-  color: var(--title-color);
-  animation-duration: 2s;
-  animation-name: appear;
+  color: white;
+  animation-duration: 0.5s;
+  animation: appear 0.5s ease-in-out;
 }
 .Home .Info #Name {
   margin-Left: 100px;
   padding: 5px 10px;
-  background-color: white;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(54, 202, 252);
   border-radius: 20px;
-  animation-duration: 3s;
-  animation-name: appear;
-  outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
+  animation: appear 1s ease-in-out;
 }
 
 @keyframes appear {
   from {
     opacity: 0%;
+    scale: 0;
   }
   to {
     opacity: 100%;
+    scale: 1;
   }
 }
 /* .appear {
@@ -151,11 +151,10 @@
   gap: 20px;
 }
 .AboutText > p {
-  color: black;
+  color: white;
   font-size: 22px;
-  background-color: white;
+  background-color: rgba(0, 33, 43, 0.486);
   padding: 15px;
-  outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
 }
 .AboutText > p:nth-child(even) {
   text-align: start;
@@ -175,91 +174,6 @@
     font-size: 18px;
   }
 }
-/* ===== STACK ===== */
-.StackSection {
-  display: flex;
-  gap: 10px;
-}
-
-.StackContent {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  gap: 10px;
-}
-.StackContent .Stacks {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-secondary);
-  padding: 20px;
-  gap: 5px;
-  width: 15rem;
-  height: 5rem;
-  border-radius: 20px;
-  outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
-  cursor: pointer;
-}
-.StackContent .Stacks .StacksDetail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.StackContent .Stacks .StacksTitle {
-  color: var(--color-primary);
-  font-size: 20px;
-  text-align: center;
-}
-.StackContent .Stacks .arrow-down {
-  border: solid var(--color-primary);
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(45deg);
-}
-@media (max-width: 768px) {
-  .StackContent .Stacks {
-    width: 100%;
-  }
-}
-.StackContent .StacksDescription {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.StackDetailSection {
-  height: 10rem;
-  width: 100%;
-  opacity: 0;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 5px var(--color-secondary);
-}
-.StackDetailSection .StacksTitle {
-  color: var(--color-primary);
-  font-size: 20px;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .StackContent {
-    flex-direction: column;
-  }
-}
 /* ===== PROJECTS ===== */
 .Projects-list {
   display: flex;
@@ -271,7 +185,7 @@
   gap: 40px;
 }
 .Projects-list .Project {
-  background-color: var(--color-secondary);
+  background-color: rgba(0, 4, 80, 0.5);
   padding: 20px;
   width: 20rem;
   height: 10rem;
@@ -328,13 +242,6 @@
   src: url("../font/Roboto-Regular.ttf");
   font-display: swap;
 }
-:root {
-  --background-color: #121212;
-  --color-primary: white;
-  --color-secondary: #101010;
-  --title-color: #101010;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -347,26 +254,21 @@
 }
 
 html::-webkit-scrollbar {
-  background-color: var(--background-color);
   width: 0px;
 }
 
-html::-webkit-scrollbar-thumb {
-  background-color: var(--color-secondary);
-}
-
 *::-moz-selection {
-  color: var(--background-color);
-  background: var(--color-primary);
+  color: black;
+  background: white;
 }
 
 *::selection {
-  color: var(--background-color);
-  background: var(--color-primary);
+  color: black;
+  background: white;
 }
 
 body {
-  background-color: var(--background-color);
+  background-image: linear-gradient(to right bottom, #7affba, #2af4d8, #00e6ef, #00d5fc, #49c2fb, #55c1fa, #60c0f9, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
 
 #background {
@@ -378,17 +280,8 @@ body {
   width: 1px;
   background-color: #fff;
   border-radius: 100%;
-  animation: zoom 16s alternate infinite;
 }
 
-@keyframes zoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.5);
-  }
-}
 .Page {
   background-color: transparent;
   scroll-snap-align: start;
@@ -399,65 +292,17 @@ body {
 }
 
 .Title {
-  color: var(--title-color);
+  color: white;
   text-align: center;
   padding: 10px 30px 30px 30px;
-}
-
-.Black {
-  color: var(--color-secondary);
-}
-
-.White {
-  color: var(--color-secondary);
 }
 
 .Container {
   width: fit-content;
   height: fit-content;
   padding: 20px;
-  /* opacity: 0; */
 }
 
-.Button {
-  cursor: pointer;
-  padding: 10px;
-  width: fit-content;
-  border-radius: 20px;
-  border: 1px solid var(--color-secondary);
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
-}
-
-.Button:hover {
-  border-color: var(--color-primary);
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-}
-
-#DarkModeBtn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  cursor: pointer;
-}
-
-#cloud {
-  width: 300px;
-  height: 100px;
-  background-color: white;
-  border-radius: 50px;
-  animation: moveClouds 10s linear infinite alternate;
-}
-
-@keyframes moveClouds {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
 /* ===== CONTACT ===== */
 .ContactSection {
   display: flex;

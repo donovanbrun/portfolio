@@ -25,81 +25,29 @@
 </head>
 
 <body>
-    <div id="background"></div>
-    <img id=" DarkModeBtn" class="NavIcon" src="img/icon/moon.svg" alt="home" width="40px" />
     <div class="modal-zone">
         <div class="modal"></div>
     </div>
 
-    <!-- <div id="Nav">
-        <a class="NavItem" id="NavContact" title="Contact">
-            <img class="NavIcon" src="img/icon/contact.svg" alt="contact" width="24px">
-        </a>
-        <a class="NavItem" id="NavProjects" title="Projects">
-            <img class="NavIcon" src="img/icon/project.svg" alt="project" width="24px">
+    <div id="Nav">
+        <a class="NavItem NavItemCurrent" id="NavHome" title="Home">
+            <img class="NavIcon" src="img/icon/home.svg" alt="home" width="24px">
         </a>
         <a class="NavItem" id="NavAbout" title="About">
             <img class="NavIcon" src="img/icon/about.svg" alt="about" width="24px">
         </a>
-        <a class="NavItem NavItemCurrent" id="NavHome" title="Home">
-            <img class="NavIcon" src="img/icon/home.svg" alt="home" width="24px">
+        <a class="NavItem" id="NavProjects" title="Projects">
+            <img class="NavIcon" src="img/icon/project.svg" alt="project" width="24px">
         </a>
-    </div> -->
-
-    <div class='Page' id="Contact">
-        <div class="Container" id="ContactContainer">
-            <h1 class="Title">Contact me</h1>
-            <div class='ContactSection'>
-                <a href='https://www.linkedin.com/in/donovan-brun/' target="_blank" rel="noreferrer"><img alt="linkedin"
-                        class="ContactImage" src='img/linkedin.png' width="100px" height="100px" /></a>
-                <a href='https://github.com/donovanbrun' target="_blank" rel="noreferrer"><img alt="github"
-                        class="ContactImage" src='img/github.png' width="100px" height="100px" /></a>
-                <a href='mailto:donovanbrun@gmail.com' target="_blank" rel="noreferrer"><img alt="mail"
-                        class="ContactImage" src='img/mail.png' width="100px" height="100px" /></a>
-            </div>
-        </div>
+        <a class="NavItem" id="NavContact" title="Contact">
+            <img class="NavIcon" src="img/icon/contact.svg" alt="contact" width="24px">
+        </a>
     </div>
 
-    <div class='Page' id="Projects">
-        <div class="Container" id="ProjectsContainer">
-            <h1 class="Title">My projects</h1>
-            <div class='Projects-list'>
-                <project-card name="Organizr" description="My productivity project" detail="PWA Web application"
-                    link="https://organizr.donovanbrun.com/" tech="react,spring,postgres,docker">
-                    <h1>Organizr</h1>
-                    <h3>A simple web application that I use every day to manage my tasks and take notes.<br>It works
-                        both online and offline. Available in PWA.</h3>
-                    <h4>Status : finished</h4>
-                    <div>
-                        <a href="https://github.com/donovanbrun/organizr-front" target="_blank">Github web</a>
-                        <a href="https://github.com/donovanbrun/organizr-back" target="_blank">Github api</a>
-                    </div>
-                    <a href="https://organizr.donovanbrun.com/" target="_blank">Try it now !</a>
-                </project-card>
-                <project-card name="SandWhich" description="Sandwich recipes sharing application" detail="Mobile app"
-                    link="https://github.com/donovanbrun/sandwhich" tech="react-native,gofiber,mongodb">
-                    <h1>SandWhich</h1>
-                    <h3>A mobile application for sharing your best sandwich recipes with others.</h3>
-                    <h4>Status : in progress</h4>
-                    <div>
-                        <a href="https://github.com/donovanbrun/sandwhich" target="_blank">Github mobile app</a>
-                        <a href="https://github.com/donovanbrun/sandwhich-api" target="_blank">Github api</a>
-                    </div>
-                </project-card>
-                <project-card name="TchouTchou" description="Railway sandbox" detail="Web game"
-                    link="https://tchou-tchou.vercel.app" tech="typescript">
-                    <h1>TchouTchou</h1>
-                    <h3>A web-based sandbox game where you can construct and play with your own railway.</h3>
-                    <h4>We were five working on this project for two months.</h4>
-                    <h4>Status : finished</h4>
-                    <a href="https://tchou-tchou.vercel.app" target="_blank">Try it now !</a>
-                </project-card>
-                <project-card name="Workflow" description="Manage my data" detail="API and CRON data engineering"
-                    link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
-                <project-card name="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
-                    detail="Web application" link="https://github.com/donovanbrun/alumni-backend"
-                    tech="angular,django,postgres,docker"></project-card>
-            </div>
+    <div class="Home Page" id="Home">
+        <div class=" Info">
+            <p id='Hi' class='WelcomeTitle'>Hi, I'm</p>
+            <p id='Name' class="WelcomeTitle">Donovan Brun</p>
         </div>
     </div>
 
@@ -131,14 +79,63 @@
         </div>
     </div>
 
-    <div class="Home Page" id="Home">
-        <div id="cloud""></div>
-        <h1>Scroll to the top !</h1>
-        <div class=" Info">
-            <p id='Hi' class='WelcomeTitle'>Hi, I'm</p>
-            <p id='Name' class="WelcomeTitle">Donovan Brun</p>
+    <div class='Page' id="Projects">
+        <div class="Container" id="ProjectsContainer">
+            <h1 class="Title">My projects</h1>
+            <div class='Projects-list'>
+                <project-card name="Organizr" description="My productivity project" detail="PWA Web application"
+                    link="https://organizr.donovanbrun.com/" tech="react,spring,postgres,docker">
+                    <h1>Organizr</h1>
+                    <h3>A simple web application that I use every day to manage my tasks and take notes.<br>It works
+                        both online and offline. Available in PWA.</h3>
+                    <h4>Status : finished</h4>
+                    <div>
+                        <a href="https://github.com/donovanbrun/organizr-front" target="_blank">Github web</a>
+                        <a href="https://github.com/donovanbrun/organizr-back" target="_blank">Github api</a>
+                    </div>
+                    <a href="https://organizr.donovanbrun.com/" target="_blank">Try it now !</a>
+                </project-card>
+                <project-card name="Space Odyssey" description="Space escape game in Virtual Reality"
+                    detail="Virtual Reality Game" link="" tech=""></project-card>
+                <project-card name="TchouTchou" description="Railway sandbox" detail="Web game"
+                    link="https://tchou-tchou.vercel.app" tech="typescript">
+                    <h1>TchouTchou</h1>
+                    <h3>A web-based sandbox game where you can construct and play with your own railway.</h3>
+                    <h4>We were five working on this project for two months.</h4>
+                    <h4>Status : finished</h4>
+                    <a href="https://tchou-tchou.vercel.app" target="_blank">Try it now !</a>
+                </project-card>
+                <project-card name="Workflow" description="Manage my data" detail="API and CRON data engineering"
+                    link="https://github.com/donovanbrun/workflow" tech="node,express"></project-card>
+                <project-card name="SandWhich" description="Sandwich recipes sharing application" detail="Mobile app"
+                    link="https://github.com/donovanbrun/sandwhich" tech="react-native,gofiber,mongodb">
+                    <h1>SandWhich</h1>
+                    <h3>A mobile application for sharing your best sandwich recipes with others.</h3>
+                    <h4>Status : in progress</h4>
+                    <div>
+                        <a href="https://github.com/donovanbrun/sandwhich" target="_blank">Github mobile app</a>
+                        <a href="https://github.com/donovanbrun/sandwhich-api" target="_blank">Github api</a>
+                    </div>
+                </project-card>
+                <project-card name="Alumni FIL" description="Webapp for alumni of FIL at IMT Atlantique"
+                    detail="Web application" link="https://github.com/donovanbrun/alumni-backend"
+                    tech="angular,django,postgres,docker"></project-card>
+            </div>
         </div>
-        <div style="width: 100vw; height: 10vh; background-color: green;"></div>
+    </div>
+
+    <div class='Page' id="Contact">
+        <div class="Container" id="ContactContainer">
+            <h1 class="Title">Contact me</h1>
+            <div class='ContactSection'>
+                <a href='https://www.linkedin.com/in/donovan-brun/' target="_blank" rel="noreferrer"><img alt="linkedin"
+                        class="ContactImage" src='img/linkedin.png' width="100px" height="100px" /></a>
+                <a href='https://github.com/donovanbrun' target="_blank" rel="noreferrer"><img alt="github"
+                        class="ContactImage" src='img/github.png' width="100px" height="100px" /></a>
+                <a href='mailto:donovanbrun@gmail.com' target="_blank" rel="noreferrer"><img alt="mail"
+                        class="ContactImage" src='img/mail.png' width="100px" height="100px" /></a>
+            </div>
+        </div>
     </div>
 </body>
 

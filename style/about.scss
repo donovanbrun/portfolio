@@ -9,11 +9,10 @@
     gap: 20px;
 
     >p {
-        color: black;
+        color: white;
         font-size: 22px;
-        background-color: white;
+        background-color: rgba(0, 33, 43, 0.486);
         padding: 15px;
-        outline: #66666670 solid 1px;
     }
 
     >p:nth-child(even) {

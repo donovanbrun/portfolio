@@ -20,7 +20,7 @@
         width: 50vw;
         height: fit-content;
         padding: 30px;
-        background-color: var(--background-color);
+        background-color: rgba(180, 181, 255, 0.95);
         outline: #66666670 solid 1px;
         border-radius: 15px;
         z-index: 101;
@@ -33,14 +33,14 @@
         a {
             text-decoration: none;
             padding: 10px;
-            background-color: var(--color-primary);
-            color: var(--color-secondary);
+            background-color: green;
+            color: white;
             border-radius: 15px;
         }
 
         a:hover {
-            color: var(--color-primary);
-            background-color: var(--color-secondary);
+            color: black;
+            background-color: lightgreen;
         }
     }
 }
