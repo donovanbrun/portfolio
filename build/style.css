@@ -153,8 +153,15 @@
 .AboutText > p {
   color: white;
   font-size: 22px;
-  background-color: rgba(0, 33, 43, 0.486);
+  background-color: rgba(0, 20, 50, 0.486);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  backdrop-filter: blur(10px) saturate(180%);
   padding: 15px;
+}
+.AboutText > p:hover {
+  scale: 1.05;
+  outline: 1px solid white;
+  transition: scale 0.3s ease-in-out;
 }
 .AboutText > p:nth-child(even) {
   text-align: start;
@@ -186,12 +193,19 @@
 }
 .Projects-list .Project {
   background-color: rgba(0, 4, 80, 0.5);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  backdrop-filter: blur(10px) saturate(180%);
   padding: 20px;
   width: 20rem;
   height: 10rem;
   cursor: pointer;
   border-radius: 15px;
   outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
+}
+.Projects-list .Project:hover {
+  scale: 1.1;
+  outline: 1px solid white;
+  transition: scale 0.3s ease-in-out;
 }
 .Projects-list .Project, .Projects-list .Project > * {
   display: flex;
@@ -316,6 +330,10 @@ body {
   border-radius: 50%;
   padding: 2px;
   width: 100px;
+}
+.ContactImage:hover {
+  scale: 1.1;
+  transition: scale 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
