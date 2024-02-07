@@ -20,7 +20,7 @@
   width: 50vw;
   height: fit-content;
   padding: 30px;
-  background-color: rgba(180, 181, 255, 0.95);
+  background-color: rgba(93, 94, 171, 0.95);
   outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
   border-radius: 15px;
   z-index: 101;
@@ -182,12 +182,20 @@
   }
 }
 /* ===== PROJECTS ===== */
+#ProjectsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .Projects-list {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 80%;
+  max-width: 70%;
   margin: auto;
   gap: 40px;
 }
@@ -315,6 +323,18 @@ body {
   width: fit-content;
   height: fit-content;
   padding: 20px;
+}
+
+.button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: #dcdcdc;
 }
 
 /* ===== CONTACT ===== */
