@@ -6,12 +6,14 @@ export class ProjectCard extends HTMLElement {
 
     constructor() {
         super();
+    }
 
+    connectedCallback() {
         const name = this.getAttribute('name');
         const description = this.getAttribute('description');
         const detail = this.getAttribute('detail');
         const link = this.getAttribute('link');
-        this.content = this.innerHTML;
+        this.content = this.getAttribute('htmlContent');
 
         this.innerHTML = `
         <div class="Project">
@@ -27,9 +29,7 @@ export class ProjectCard extends HTMLElement {
           </div>
         </div>
         `;
-    }
 
-    connectedCallback() {
         this.addEventListener('mouseenter', () => this.show());
         this.addEventListener('mouseleave', () => this.show());
 
