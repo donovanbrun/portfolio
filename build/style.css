@@ -121,7 +121,13 @@
 @media (max-width: 768px) {
   #Hi,
   #Name {
-    margin: 0px;
+    margin: 0px !important;
+  }
+  #Hi {
+    font-size: 1.5rem !important;
+  }
+  #Name {
+    font-size: 2rem !important;
   }
 }
 #About {
@@ -232,6 +238,14 @@
   display: none;
 }
 
+@media (max-width: 768px) {
+  #ProjectsContainer {
+    padding: 10px;
+  }
+  .Projects-list .Project {
+    width: 90vw;
+  }
+}
 /* ===== GENERAL ===== */
 @font-face {
   font-family: "RobotoLocal";

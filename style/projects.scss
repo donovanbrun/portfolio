@@ -86,3 +86,15 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    #ProjectsContainer {
+        padding: 10px;
+    }
+
+    .Projects-list {
+        .Project {
+            width: 90vw;
+        }
+    }
+}
