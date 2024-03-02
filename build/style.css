@@ -20,25 +20,24 @@
   width: 50vw;
   height: fit-content;
   padding: 30px;
-  background-color: rgba(93, 94, 171, 0.95);
+  background-color: #F9F9F9;
   outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
   border-radius: 15px;
   z-index: 101;
 }
 .modal-zone .modal > * {
   text-align: center;
-  color: white;
+  color: #101010;
 }
 .modal-zone .modal a {
   text-decoration: none;
   padding: 10px;
-  background-color: green;
-  color: white;
+  background-color: lightgrey;
+  color: #101010;
   border-radius: 15px;
 }
 .modal-zone .modal a:hover {
-  color: black;
-  background-color: lightgreen;
+  background-color: #dcdcdc;
 }
 
 @media (max-width: 768px) {
@@ -48,41 +47,23 @@
 }
 #Nav {
   position: fixed;
-  height: 50vh;
-  top: 25vh;
-  left: 1vw;
-  width: 80px;
+  top: 0px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #Nav .NavItem {
   text-decoration: none;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.3);
-  outline: 1px white solid;
-  border-radius: 20px;
-  width: 48px;
-  height: 48px;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
+  padding: 10px;
 }
 #Nav .NavItem:hover {
-  outline: 2px white solid;
-}
-#Nav .NavItem .NavIcon {
-  width: 24px;
-  height: 24px;
-}
-#Nav .NavItemCurrent {
-  outline: 2px white solid;
-  transform: scale(1.2) translate(10px, 0px);
-  transition: transform 0.2s;
+  color: lightgrey;
 }
 
 @media (max-width: 768px) {
@@ -94,6 +75,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #080808 !important;
 }
 .Home .Info {
   display: flex;
@@ -101,16 +83,18 @@
   justify-content: space-between;
 }
 .Home .Info #Hi {
+  font-size: 2rem;
   margin-right: 100px;
   color: white;
   animation-duration: 0.5s;
   animation: appear 0.5s ease-in-out;
 }
 .Home .Info #Name {
+  font-size: 3rem;
   margin-Left: 100px;
   padding: 5px 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: rgb(54, 202, 252);
+  background-color: white;
+  color: black;
   border-radius: 20px;
   animation: appear 1s ease-in-out;
 }
@@ -140,6 +124,10 @@
     margin: 0px;
   }
 }
+#About {
+  background-color: white;
+}
+
 .AboutTitle {
   padding-bottom: 20px;
   margin-top: 10px;
@@ -151,25 +139,11 @@
   gap: 20px;
 }
 .AboutText > p {
-  color: white;
-  font-size: 22px;
-  background-color: rgba(0, 20, 50, 0.486);
+  color: #101010;
+  font-size: 1.5rem;
   -webkit-backdrop-filter: blur(10px) saturate(180%);
   backdrop-filter: blur(10px) saturate(180%);
   padding: 15px;
-}
-.AboutText > p:hover {
-  scale: 1.05;
-  outline: 1px solid white;
-  transition: scale 0.3s ease-in-out;
-}
-.AboutText > p:nth-child(even) {
-  text-align: start;
-  border-radius: 0px 15px 15px 0px;
-}
-.AboutText > p:nth-child(odd) {
-  text-align: end;
-  border-radius: 15px 0px 0px 15px;
 }
 .AboutText .highlight {
   font-weight: bold;
@@ -188,6 +162,7 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  padding: 30px;
 }
 
 .Projects-list {
@@ -195,23 +170,22 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 70%;
+  max-width: 80%;
   margin: auto;
-  gap: 40px;
+  gap: 20px;
 }
 .Projects-list .Project {
-  background-color: rgba(0, 4, 80, 0.5);
+  background-color: #121212;
   -webkit-backdrop-filter: blur(10px) saturate(180%);
   backdrop-filter: blur(10px) saturate(180%);
   padding: 20px;
-  width: 20rem;
-  height: 10rem;
+  width: 30rem;
+  height: 30rem;
   cursor: pointer;
-  border-radius: 15px;
-  outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
+  border-radius: 3rem;
 }
 .Projects-list .Project:hover {
-  scale: 1.1;
+  scale: 1.03;
   outline: 1px solid white;
   transition: scale 0.3s ease-in-out;
 }
@@ -280,17 +254,17 @@ html::-webkit-scrollbar {
 }
 
 *::-moz-selection {
-  color: black;
-  background: white;
+  color: white;
+  background: black;
 }
 
 *::selection {
-  color: black;
-  background: white;
+  color: white;
+  background: black;
 }
 
 body {
-  background-image: linear-gradient(to right bottom, #7affba, #2af4d8, #00e6ef, #00d5fc, #49c2fb, #55c1fa, #60c0f9, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-color: #F5F5F7;
 }
 
 #background {
@@ -305,18 +279,18 @@ body {
 }
 
 .Page {
-  background-color: transparent;
   scroll-snap-align: start;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Title {
-  color: white;
-  text-align: center;
-  padding: 10px 30px 30px 30px;
+  color: black;
+  text-transform: uppercase;
+  padding: 10px 30px 30px 0px;
+  font-size: 3rem;
 }
 
 .Container {
@@ -326,10 +300,10 @@ body {
 }
 
 .button {
-  background-color: #fff;
-  color: #000;
+  background-color: lightgrey;
+  color: #101010;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
@@ -338,6 +312,16 @@ body {
 }
 
 /* ===== CONTACT ===== */
+#Contact {
+  background-color: #101010;
+}
+
+#ContactContainer > h1 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
 .ContactSection {
   display: flex;
   justify-content: center;
@@ -354,6 +338,16 @@ body {
 .ContactImage:hover {
   scale: 1.1;
   transition: scale 0.3s ease-in-out;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #080808;
+  color: #F9F9F9;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,7 @@
+#About {
+    background-color: white;
+}
+
 .AboutTitle {
     padding-bottom: 20px;
     margin-top: 10px;
@@ -9,28 +13,11 @@
     gap: 20px;
 
     >p {
-        color: white;
-        font-size: 22px;
-        background-color: rgba(0, 20, 50, 0.486);
+        color: #101010;
+        font-size: 1.5rem;
         -webkit-backdrop-filter: blur(10px) saturate(180%);
         backdrop-filter: blur(10px) saturate(180%);
         padding: 15px;
-
-        &:hover {
-            scale: 1.05;
-            outline: 1px solid white;
-            transition: scale 0.3s ease-in-out;
-        }
-    }
-
-    >p:nth-child(even) {
-        text-align: start;
-        border-radius: 0px 15px 15px 0px;
-    }
-
-    >p:nth-child(odd) {
-        text-align: end;
-        border-radius: 15px 0px 0px 15px;
     }
 
     .highlight {
