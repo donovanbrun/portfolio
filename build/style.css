@@ -37,7 +37,7 @@
   border-radius: 15px;
 }
 .modal-zone .modal a:hover {
-  background-color: #dcdcdc;
+  background-color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
@@ -63,7 +63,7 @@
   padding: 10px;
 }
 #Nav .NavItem:hover {
-  color: lightgrey;
+  color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
@@ -109,10 +109,6 @@
     scale: 1;
   }
 }
-/* .appear {
-    animation-duration: 2s;
-    animation-name: appear;
-} */
 .WelcomeTitle {
   margin: 10px;
   font-size: 5vh;
@@ -153,7 +149,7 @@
 }
 .AboutText .highlight {
   font-weight: bold;
-  font-style: italic;
+  color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
@@ -167,18 +163,21 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
   gap: 20px;
   padding: 30px;
 }
 
 .Projects-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  max-width: 80%;
   margin: auto;
   gap: 20px;
+}
+.Projects-list > h1 {
+  text-align: center;
 }
 .Projects-list .Project {
   background-color: #121212;
@@ -227,7 +226,7 @@
   padding: 10px;
 }
 .Projects-list .Project .ProjectLink {
-  color: white;
+  color: var(--accent-color);
   font-weight: bold;
   font-style: italic;
 }
@@ -242,11 +241,22 @@
   #ProjectsContainer {
     padding: 10px;
   }
+  #ProjectsContainer > h1 {
+    text-align: center;
+    padding: 10px 0px;
+  }
+  .Projects-list {
+    grid-template-columns: 1fr !important;
+  }
   .Projects-list .Project {
     width: 90vw;
   }
 }
 /* ===== GENERAL ===== */
+:root {
+  --accent-color: #FCA311;
+}
+
 @font-face {
   font-family: "RobotoLocal";
   src: url("../font/Roboto-Regular.ttf");
@@ -301,7 +311,7 @@ body {
 }
 
 .Title {
-  color: black;
+  color: var(--accent-color);
   text-transform: uppercase;
   padding: 10px 30px 30px 0px;
   font-size: 3rem;
@@ -322,7 +332,7 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 .button:hover {
-  background-color: #dcdcdc;
+  background-color: var(--accent-color);
 }
 
 /* ===== CONTACT ===== */

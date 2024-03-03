@@ -6,6 +6,10 @@
 
 /* ===== GENERAL ===== */
 
+:root {
+    --accent-color: #FCA311;
+}
+
 @font-face {
     font-family: "RobotoLocal";
     src: url("../font/Roboto-Regular.ttf");
@@ -61,7 +65,7 @@ body {
 }
 
 .Title {
-    color: black;
+    color: var(--accent-color);
     text-transform: uppercase;
     padding: 10px 30px 30px 0px;
     font-size: 3rem;
@@ -82,7 +86,7 @@ body {
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
-        background-color: #dcdcdc;
+        background-color: var(--accent-color);
     }
 }
 

@@ -5,18 +5,22 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
     gap: 20px;
     padding: 30px;
 }
 
 .Projects-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    max-width: 80%;
     margin: auto;
     gap: 20px;
+
+    > h1 {
+        text-align: center;
+    }
 
     .Project {
         background-color: #121212;
@@ -72,7 +76,7 @@
         }
 
         .ProjectLink {
-            color: white;
+            color: var(--accent-color);
             font-weight: bold;
             font-style: italic;
         }
@@ -90,9 +94,16 @@
 @media (max-width: 768px) {
     #ProjectsContainer {
         padding: 10px;
+
+        > h1 {
+            text-align: center;
+            padding: 10px 0px;
+        }
     }
 
     .Projects-list {
+        grid-template-columns: 1fr !important;
+
         .Project {
             width: 90vw;
         }
