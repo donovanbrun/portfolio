@@ -266,12 +266,18 @@
   .Projects-list .Project {
     width: 90vw;
   }
+  .Projects-list .Project .ProjectIllustration {
+    width: 90vw;
+  }
 }
 @media (max-width: 1000px) {
   .Projects-list {
     grid-template-columns: 2fr !important;
   }
   .Projects-list .Project {
+    width: 90vw;
+  }
+  .Projects-list .Project .ProjectIllustration {
     width: 90vw;
   }
 }
