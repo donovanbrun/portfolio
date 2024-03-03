@@ -12,13 +12,6 @@ const aboutNav = document.getElementById('NavAbout');
 const projectsNav = document.getElementById('NavProjects');
 const contactNav = document.getElementById('NavContact');
 
-window.addEventListener('scroll', () => {
-    homeInViewport(isInViewport(homeDiv));
-    aboutInViewport(isInViewport(aboutDiv));
-    projectsInViewport(isInViewport(projectsDiv));
-    contactInViewport(isInViewport(contactDiv));
-});
-
 function navigate(section) {
     document.getElementById(section).scrollIntoView({ behavior: "smooth" });
 }
@@ -47,45 +40,6 @@ projectsNav.addEventListener('click', () => {
 contactNav.addEventListener('click', () => {
     navigate("Contact");
 });
-
-function homeInViewport(isInViewport) {
-    if (isInViewport) {
-        homeNav.classList.add('NavItemCurrent');
-    }
-    else {
-        homeNav.classList.remove('NavItemCurrent');
-    }
-}
-
-function aboutInViewport(isInViewport) {
-    if (isInViewport) {
-        aboutNav.classList.add('NavItemCurrent');
-        // aboutDiv.style.animation = 'appear 1s ease-in-out';
-    }
-    else {
-        aboutNav.classList.remove('NavItemCurrent');
-    }
-}
-
-function projectsInViewport(isInViewport) {
-    if (isInViewport) {
-        projectsNav.classList.add('NavItemCurrent');
-        // projectsDiv.style.animation = 'appear 1s ease-in-out';
-    }
-    else {
-        projectsNav.classList.remove('NavItemCurrent');
-    }
-}
-
-function contactInViewport(isInViewport) {
-    if (isInViewport) {
-        contactNav.classList.add('NavItemCurrent');
-        // contactDiv.style.animation = 'appear 1s ease-in-out';
-    }
-    else {
-        contactNav.classList.remove('NavItemCurrent');
-    }
-}
 
 // Generate Projects
 const projectsList = document.getElementsByClassName('Projects-list')[0];

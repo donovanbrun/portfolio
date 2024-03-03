@@ -6,6 +6,10 @@
 
 /* ===== GENERAL ===== */
 
+:root {
+    --accent-color: #FCA311;
+}
+
 @font-face {
     font-family: "RobotoLocal";
     src: url("../font/Roboto-Regular.ttf");
@@ -28,17 +32,17 @@ html::-webkit-scrollbar {
 }
 
 *::-moz-selection {
-    color: black;
-    background: white;
+    color: white;
+    background: black;
 }
 
 *::selection {
-    color: black;
-    background: white;
+    color: white;
+    background: black;
 }
 
 body {
-    background-image: linear-gradient(to right bottom, #7affba, #2af4d8, #00e6ef, #00d5fc, #49c2fb, #55c1fa, #60c0f9, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-color: #F5F5F7;
 }
 
 #background {
@@ -53,18 +57,18 @@ body {
 }
 
 .Page {
-    background-color: transparent;
     scroll-snap-align: start;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .Title {
-    color: white;
-    text-align: center;
-    padding: 10px 30px 30px 30px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    padding: 10px 30px 30px 0px;
+    font-size: 3rem;
 }
 
 .Container {
@@ -74,19 +78,31 @@ body {
 }
 
 .button {
-    background-color: #fff;
-    color: #000;
+    background-color: lightgrey;
+    color: #101010;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
-        background-color: #dcdcdc;
+        background-color: var(--accent-color);
     }
 }
 
 /* ===== CONTACT ===== */
+
+#Contact {
+    background-color: #101010;
+}
+
+#ContactContainer {
+    > h1 {
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+}
 
 .ContactSection {
     display: flex;
@@ -105,4 +121,14 @@ body {
         scale: 1.1;
         transition: scale 0.3s ease-in-out;
     }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #080808;
+    color: #F9F9F9;
 }
