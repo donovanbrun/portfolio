@@ -3,6 +3,7 @@ export const data = {
         {
             "name": "Organizr",
             "description": "My productivity project",
+            "img": "img/projects/organizr.png",
             "detail": "PWA Web application",
             "link": "https://organizr.donovanbrun.com/",
             "tech": "react,spring,postgres,docker",
@@ -18,6 +19,7 @@ export const data = {
         {
             "name": "Space Odyssey",
             "description": "Space escape game in Virtual Reality",
+            "img": "img/projects/space-odyssee.png",
             "detail": "Virtual Reality Game",
             "link": "",
             "tech": "unity,blender",
@@ -26,6 +28,7 @@ export const data = {
         {
             "name": "TchouTchou",
             "description": "Railway sandbox",
+            "img": "img/projects/tchou-tchou.png",
             "detail": "Web game",
             "link": "https://tchou-tchou.vercel.app",
             "tech": "typescript",
@@ -38,6 +41,7 @@ export const data = {
         {
             "name": "Workflow",
             "description": "ETL framework",
+            "img": "img/projects/workflow.png",
             "detail": "API and CRON data engineering",
             "link": "https://github.com/donovanbrun/workflow",
             "tech": "node,express,typescript",
@@ -50,6 +54,7 @@ export const data = {
         {
             "name": "SandWhich",
             "description": "Sandwich recipes sharing application",
+            "img": "",
             "detail": "Mobile app",
             "link": "https://github.com/donovanbrun/sandwhich",
             "tech": "react-native,gofiber,mongodb",
@@ -64,6 +69,7 @@ export const data = {
         {
             "name": "AutoTrombi",
             "description": "Face book of FIL at IMT Atlantique",
+            "img": "",
             "detail": "Web application",
             "link": "https://auto-trombi.vercel.app/",
             "tech": "vue",
@@ -75,6 +81,7 @@ export const data = {
         {
             "name": "Swiss Army Menu",
             "description": "Radial menu",
+            "img": "",
             "detail": "Demonstration of a radial menu that can hold a lot of functions",
             "link": "https://donovanbrun.github.io/SwissArmyMenu/",
             "tech": "typescript",
@@ -86,6 +93,7 @@ export const data = {
         {
             "name": "Alumni FIL",
             "description": "Webapp for alumni of FIL at IMT Atlantique",
+            "img": "",
             "detail": "Web application",
             "link": "https://github.com/donovanbrun/alumni-backend",
             "tech": "angular,django,postgres,docker",

@@ -2,9 +2,16 @@
     background-color: white;
 }
 
+#AboutContainer {
+    > h1 {
+        text-align: center;
+    }
+}
+
 .AboutTitle {
     padding-bottom: 20px;
     margin-top: 10px;
+    text-align: center;
 }
 
 .AboutText {
