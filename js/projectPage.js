@@ -6,6 +6,7 @@ data.projects.forEach(project => {
     const projectCard = document.createElement('project-card');
     projectCard.setAttribute('name', project.name);
     projectCard.setAttribute('description', project.description);
+    projectCard.setAttribute('date', project.date);
     projectCard.setAttribute('img', project.img);
     projectCard.setAttribute('detail', project.detail);
     projectCard.setAttribute('link', project.link);

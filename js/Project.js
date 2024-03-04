@@ -11,8 +11,8 @@ export class ProjectCard extends HTMLElement {
     connectedCallback() {
         const name = this.getAttribute('name');
         const description = this.getAttribute('description');
+        const date = this.getAttribute('date');
         const img = this.getAttribute('img');
-        console.log(img);
         const detail = this.getAttribute('detail');
         const link = this.getAttribute('link');
         this.content = this.getAttribute('htmlContent');
@@ -22,12 +22,13 @@ export class ProjectCard extends HTMLElement {
           <div class="displayed">
             <h1 class="ProjectTitle">${name}</h1>
             <p class="ProjectDescription">${description}</p>
-            ${img.length ? '<img src="' + img + '" class="ProjectIllustration" width="300px" height="200px">' : ''}
+            ${img.length ? '<img src="' + img + '" class="ProjectIllustration" width="300px" height="200px" alt="' + name + '">' : ''}
           </div>
           <div class="hidden">
             <p class="ProjectDescription">${detail}</p>
             <div class="ProjectTech">
             </div>
+            <p class="ProjectDescription">${date}</p>
             <p class="ProjectLink">See more</p>
           </div>
         </div>
