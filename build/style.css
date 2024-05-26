@@ -14,30 +14,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  width: 75vw;
   position: fixed;
-  margin: auto;
-  width: 50vw;
-  height: fit-content;
-  padding: 30px;
-  background-color: #F9F9F9;
-  outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
   border-radius: 15px;
   z-index: 101;
   animation: scaleAnimation 0.3s ease-in-out;
+  background-color: #F9F9F9;
+  outline: rgba(102, 102, 102, 0.4392156863) solid 1px;
+  height: fit-content;
 }
-.modal-zone .modal > * {
+.modal-zone .modal .modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  background-color: #101010;
+  color: white;
+}
+.modal-zone .modal .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: auto;
+  padding: 30px;
+}
+.modal-zone .modal .modal-body > * {
   text-align: center;
   color: #101010;
 }
-.modal-zone .modal a {
+.modal-zone .modal .modal-body a {
   text-decoration: none;
   padding: 10px;
+  margin: 5px;
   background-color: lightgrey;
   color: #101010;
   border-radius: 15px;
 }
-.modal-zone .modal a:hover {
+.modal-zone .modal .modal-body a:hover {
   background-color: var(--accent-color);
 }
 @media (max-width: 768px) {
@@ -106,6 +122,7 @@
   color: black;
   border-radius: 20px;
   animation: appear 1s ease-in-out;
+  height: 64px;
 }
 
 @keyframes appear {
