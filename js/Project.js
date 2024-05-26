@@ -93,7 +93,11 @@ export class ProjectCard extends HTMLElement {
 
     open() {
         if (this.content !== '') {
-            showModal(this.content);
+            showModal({
+                title: this.getAttribute('name'),
+                link: JSON.parse(this.getAttribute('link')),
+                body: this.content
+            });
         }
     }
 }

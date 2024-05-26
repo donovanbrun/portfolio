@@ -9,7 +9,7 @@ data.projects.forEach(project => {
     projectCard.setAttribute('date', project.date);
     projectCard.setAttribute('img', project.img);
     projectCard.setAttribute('detail', project.detail);
-    projectCard.setAttribute('link', project.link);
+    projectCard.setAttribute('link', JSON.stringify(project.link));
     projectCard.setAttribute('tech', project.tech);
     projectCard.setAttribute('htmlContent', project.htmlContent);
     projectsList.appendChild(projectCard);

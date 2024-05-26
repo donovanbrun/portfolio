@@ -1,5 +1,7 @@
 const modalZone = document.querySelector('.modal-zone');
 const modal = document.querySelector('.modal');
+const title = document.querySelector('.modal-title');
+const body = document.querySelector('.modal-body');
 
 modalZone.addEventListener('click', hideModal);
 
@@ -12,7 +14,14 @@ export function showModal(content) {
         duration: 250,
         fill: 'forwards'
     });
-    modal.innerHTML = content;
+    title.innerHTML = content.title;
+    body.innerHTML = content.body;
+
+    if (content.link.length === 0) return;
+
+    const links = content.link.map(l => `<a href="${l.url}" target="_blank">${l.name}</a>`);
+
+    body.innerHTML += `<div> ${links.join("")} </div>`;
 }
 
 export function hideModal(event) {
@@ -27,7 +36,6 @@ export function hideModal(event) {
         });
         setTimeout(() => {
             modalZone.style.display = 'none';
-            modal.innerHTML = '';
         }, 500);
     }
 }

@@ -27,7 +27,6 @@ function isInViewport(element) {
     return midpointX >= 0 && midpointX <= windowWidth && midpointY >= 0 && midpointY <= windowHeight;
 }
 
-
 homeNav.addEventListener('click', () => {
     navigate("Home");
 });
@@ -50,7 +49,7 @@ data.projects.slice(0, 4).forEach(project => {
     projectCard.setAttribute('date', project.date);
     projectCard.setAttribute('img', project.img);
     projectCard.setAttribute('detail', project.detail);
-    projectCard.setAttribute('link', project.link);
+    projectCard.setAttribute('link', JSON.stringify(project.link));
     projectCard.setAttribute('tech', project.tech);
     projectCard.setAttribute('htmlContent', project.htmlContent);
     projectsList.appendChild(projectCard);
@@ -74,3 +73,51 @@ data.contacts.forEach(contact => {
 
     contactsList.appendChild(aElement);
 });
+
+// animate name
+async function changeName(name, element) {
+    async function removeLetter() {
+        element.innerText = element.innerText.slice(0, element.innerText.length - 1);
+        return new Promise(resolve => setTimeout(resolve, 150));
+    }
+
+    async function addLetter(count) {
+        element.innerText = name.slice(0, count + 1);
+        return new Promise(resolve => setTimeout(resolve, 150));
+    }
+
+    let count = element.innerText.length - 1;
+
+    do {
+        await removeLetter();
+        count--;
+    }
+    while (element.innerText.length > 0);
+
+    do {
+        await addLetter(count);
+        count++;
+    }
+    while (count < name.length);
+}
+
+const name = document.getElementById('Name');
+
+function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function sleep(fn, ms = 2000) {
+    await timeout(ms);
+    return fn();
+}
+
+async function loop() {
+    await sleep(() => changeName('a Software Engineer', name))
+    await sleep(() => changeName('a Data Engineer', name))
+    await sleep(() => changeName('Donovan Brun', name))
+    sleep(() =>
+        loop()
+        , 5000);
+}
+loop();
