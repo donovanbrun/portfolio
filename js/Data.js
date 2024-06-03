@@ -130,6 +130,23 @@ export const data = {
                              <h4>Status : in progress</h4>`
         },
         {
+            "name": "Find Find no mi",
+            "description": "One Piece quiz game",
+            "date": "March 2023",
+            "img": "img/projects/find-find-no-mi.png",
+            "detail": "Web game",
+            "link": [
+                {
+                    "name": "Try it now !",
+                    "url": "https://findfindnomi.donovanbrun.com"
+                }
+            ],
+            "tech": "vue,express,typescript",
+            "htmlContent": `<h3>One Piece Quiz to find a character based on his devil fruit !</h3>
+                             <p>Simple game with scrapped data</p>
+                             <h4>Status : finished</h4>`
+        },
+        {
             "name": "AutoTrombi",
             "description": "Face book of FIL at IMT Atlantique",
             "date": "November 2023",
@@ -161,17 +178,7 @@ export const data = {
             "tech": "typescript",
             "htmlContent": `<h3>Demonstration of a radial menu that can hold a lot of functions</h3>
                             <h4>Status : finished</h4>`
-        },
-        // {
-        //     "name": "Alumni FIL",
-        //     "description": "Webapp for alumni of FIL at IMT Atlantique",
-        //     "date": "June 2022",
-        //     "img": "",
-        //     "detail": "Web application",
-        //     "link": "https://github.com/donovanbrun/alumni-backend",
-        //     "tech": "angular,django,postgres,docker",
-        //     "htmlContent": ""
-        // }
+        }
     ],
     "contacts": [
         {
