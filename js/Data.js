@@ -6,6 +6,7 @@ export const data = {
             "date": "2022-2023",
             "img": "img/projects/organizr.png",
             "detail": "PWA Web application",
+            "try": "https://organizr.donovanbrun.com/",
             "link": [
                 {
                     "name": "Backend",
@@ -14,10 +15,6 @@ export const data = {
                 {
                     "name": "Frontend",
                     "url": "https://github.com/donovanbrun/organizr-front"
-                },
-                {
-                    "name": "Try it now !",
-                    "url": "https://organizr.donovanbrun.com/"
                 }
             ],
             "tech": "react,spring,postgres,docker",
@@ -51,12 +48,8 @@ export const data = {
             "date": "Mai 2023 & February 2024",
             "img": "img/projects/tchou-tchou.png",
             "detail": "Web game",
-            "link": [
-                {
-                    "name": "Try it now !",
-                    "url": "https://tchou-tchou.vercel.app"
-                }
-            ],
+            "try": "https://tchou-tchou.vercel.app",
+            "link": [],
             "tech": "typescript",
             "htmlContent": `<h3>A web-based sandbox game where you can construct and play with your own railway.</h3>
                             <p>
@@ -71,6 +64,7 @@ export const data = {
             "date": "2023 - now",
             "img": "img/projects/workflow.png",
             "detail": "API and CRON data engineering",
+            "try": "https://www.npmjs.com/package/workflow.io",
             "link": [
                 {
                     "name": "NPM package",
@@ -107,11 +101,8 @@ export const data = {
             "date": "July 2023",
             "img": "img/projects/sandwhich.png",
             "detail": "Web and Mobile applications",
+            "try": "https://sandwhich.donovanbrun.com",
             "link": [
-                {
-                    "name": "Try it now !",
-                    "url": "https://sandwhich.donovanbrun.com"
-                },
                 {
                     "name": "Github api",
                     "url": "https://github.com/donovanbrun/sandwhich-api"
@@ -135,12 +126,8 @@ export const data = {
             "date": "March 2023",
             "img": "img/projects/find-find-no-mi.png",
             "detail": "Web game",
-            "link": [
-                {
-                    "name": "Try it now !",
-                    "url": "https://findfindnomi.donovanbrun.com"
-                }
-            ],
+            "try": "https://findfindnomi.donovanbrun.com",
+            "link": [],
             "tech": "vue,express,typescript",
             "htmlContent": `<h3>One Piece Quiz to find a character based on his devil fruit !</h3>
                              <p>Simple game with scrapped data</p>
@@ -152,12 +139,8 @@ export const data = {
             "date": "November 2023",
             "img": "",
             "detail": "Web application",
-            "link": [
-                {
-                    "name": "Try it now !",
-                    "url": "https://auto-trombi.vercel.app/"
-                }
-            ],
+            "try": "https://auto-trombi.vercel.app/",
+            "link": [],
             "tech": "vue",
             "htmlContent": `<h3>Face book of FIL at IMT Atlantique</h3>
                              <p>It is a school project to discover Vue.js</p>
@@ -169,12 +152,8 @@ export const data = {
             "date": "February 2023",
             "img": "img/projects/piemenu.gif",
             "detail": "Demonstration of a radial menu that can hold a lot of functions",
-            "link": [
-                {
-                    "name": "Try it now !",
-                    "url": "https://donovanbrun.github.io/PieMenu/"
-                }
-            ],
+            "try": "https://donovanbrun.github.io/PieMenu/",
+            "link": [],
             "tech": "typescript",
             "htmlContent": `<h3>Demonstration of a radial menu that can hold a lot of functions</h3>
                             <h4>Status : finished</h4>`

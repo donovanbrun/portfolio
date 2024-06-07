@@ -9,7 +9,7 @@
     gap: 20px;
     padding: 30px;
 
-    > h1 {
+    >h1 {
         text-align: center;
         padding: 30px 0px;
     }
@@ -47,7 +47,7 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .ProjectTitle {
             font-size: 3rem;
             font-weight: bold;
@@ -65,13 +65,6 @@
         .ProjectDescription {
             text-align: center;
             color: white;
-        }
-
-        .ProjectTech {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3px;
         }
 
         .ProjectImage {

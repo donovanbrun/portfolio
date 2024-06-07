@@ -49,6 +49,7 @@ data.projects.slice(0, 4).forEach(project => {
     projectCard.setAttribute('date', project.date);
     projectCard.setAttribute('img', project.img);
     projectCard.setAttribute('detail', project.detail);
+    projectCard.setAttribute('try', project.try);
     projectCard.setAttribute('link', JSON.stringify(project.link));
     projectCard.setAttribute('tech', project.tech);
     projectCard.setAttribute('htmlContent', project.htmlContent);

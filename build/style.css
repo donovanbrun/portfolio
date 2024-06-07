@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 75vw;
+  max-width: 75vw;
   position: fixed;
   border-radius: 15px;
   z-index: 101;
@@ -33,32 +33,78 @@
   background-color: #101010;
   color: white;
 }
+.modal-zone .modal .modal-header .modal-close {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  font-size: large;
+  color: white;
+  background-color: transparent;
+  margin: 0px 15px;
+}
+.modal-zone .modal .modal-header .modal-title {
+  margin: 0 auto;
+}
 .modal-zone .modal .modal-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
   margin: auto;
   padding: 30px;
 }
-.modal-zone .modal .modal-body > * {
-  text-align: center;
-  color: #101010;
+.modal-zone .modal .modal-body .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
 }
-.modal-zone .modal .modal-body a {
+.modal-zone .modal .modal-body .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.modal-zone .modal .modal-body .modal-description {
+  font-weight: bold;
+}
+.modal-zone .modal .modal-body .modal-try {
   text-decoration: none;
   padding: 10px;
   margin: 5px;
-  background-color: lightgrey;
+  background-color: var(--accent-color);
   color: #101010;
   border-radius: 15px;
 }
-.modal-zone .modal .modal-body a:hover {
-  background-color: var(--accent-color);
+.modal-zone .modal .modal-body .modal-tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.modal-zone .modal .modal-body .modal-text > * {
+  color: #101010;
+}
+.modal-zone .modal .modal-body .modal-link {
+  display: flex;
+  gap: 10px;
+}
+.modal-zone .modal .modal-body .modal-link a {
+  text-decoration: underline;
+  color: blue;
 }
 @media (max-width: 768px) {
   .modal-zone .modal {
-    width: 90vw;
+    max-width: 100vw;
+    overflow: auto;
+  }
+  .modal-zone .modal .modal-body .row {
+    flex-direction: column;
+  }
+  .modal-zone .modal .modal-body .modal-img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -247,12 +293,6 @@
 .Projects-list .Project .ProjectDescription {
   text-align: center;
   color: white;
-}
-.Projects-list .Project .ProjectTech {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3px;
 }
 .Projects-list .Project .ProjectImage {
   background-color: white;
