@@ -254,7 +254,6 @@
   grid-template-columns: 2fr 2fr;
   justify-content: center;
   align-items: center;
-  margin: auto;
   gap: 20px;
 }
 .Projects-list .Project {
@@ -266,24 +265,23 @@
   height: 30rem;
   cursor: pointer;
   border-radius: 20px;
-}
-.Projects-list .Project:hover {
-  scale: 1.03;
-  outline: 1px solid white;
-  transition: scale 0.3s ease-in-out;
-}
-.Projects-list .Project, .Projects-list .Project > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
+.Projects-list .Project:hover {
+  scale: 1.03;
+  outline: 1px solid white;
+  transition: scale 0.3s ease-in-out;
+}
 .Projects-list .Project .ProjectTitle {
   font-size: 3rem;
   font-weight: bold;
   color: white;
   padding: 10px;
+  text-align: center;
 }
 .Projects-list .Project .ProjectIllustration {
   width: 27rem;
@@ -309,12 +307,6 @@
   color: var(--accent-color);
   font-weight: bold;
   font-style: italic;
-}
-.Projects-list .Project .displayed {
-  display: flex;
-}
-.Projects-list .Project .hidden {
-  display: none;
 }
 
 @media (max-width: 768px) {
