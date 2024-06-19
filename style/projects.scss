@@ -20,7 +20,6 @@
     grid-template-columns: 2fr 2fr;
     justify-content: center;
     align-items: center;
-    margin: auto;
     gap: 20px;
 
     .Project {
@@ -33,19 +32,16 @@
         cursor: pointer;
         border-radius: 20px;
 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
         &:hover {
             scale: 1.03;
             outline: 1px solid white;
             transition: scale 0.3s ease-in-out;
-        }
-
-        &,
-        &>* {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
         }
 
         .ProjectTitle {
@@ -53,6 +49,7 @@
             font-weight: bold;
             color: white;
             padding: 10px;
+            text-align: center;
         }
 
         .ProjectIllustration {
@@ -82,14 +79,6 @@
             color: var(--accent-color);
             font-weight: bold;
             font-style: italic;
-        }
-
-        .displayed {
-            display: flex;
-        }
-
-        .hidden {
-            display: none;
         }
     }
 }

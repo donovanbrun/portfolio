@@ -16,11 +16,9 @@ export class ProjectCard extends HTMLElement {
 
         this.innerHTML = `
         <div class="Project">
-          <div class="displayed">
             <h1 class="ProjectTitle">${name}</h1>
             <p class="ProjectDescription">${description}</p>
             ${img.length ? '<img src="' + img + '" class="ProjectIllustration" width="300px" height="200px" alt="' + name + '">' : ''}
-          </div>
         </div>
         `;
 
