@@ -86,7 +86,12 @@ export const data = {
             "date": "October 2023 - March 2024",
             "img": "https://teslasuit.io/wp-content/uploads/TITLE-TS-and-TG_03-1.jpg",
             "detail": "Virtual Reality & Teslasuit",
-            "link": [],
+            "link": [
+                {
+                    "name": "Teslasuit",
+                    "url": "https://teslasuit.io/"
+                }
+            ],
             "tech": "unity,blender",
             "htmlContent": `<h3>POC of a simulator of physical contacts using the Teslasuit and a HTC Vive</h3>
                             <p>
