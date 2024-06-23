@@ -18,7 +18,7 @@ export class ProjectCard extends HTMLElement {
         <div class="Project">
             <h1 class="ProjectTitle">${name}</h1>
             <p class="ProjectDescription">${description}</p>
-            ${img.length ? '<img src="' + img + '" class="ProjectIllustration" width="300px" height="200px" alt="' + name + '">' : ''}
+            ${img.length ? '<img src="' + img + '" class="ProjectIllustration" width="400px" height="300px" alt="' + name + '">' : ''}
         </div>
         `;
 
