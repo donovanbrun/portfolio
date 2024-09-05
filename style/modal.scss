@@ -92,9 +92,13 @@
             }
 
             .modal-text {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
                 >* {
                     color: #101010;
-
+                    line-height: 1.5;
                 }
             }
 

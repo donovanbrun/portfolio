@@ -83,8 +83,14 @@
   align-items: center;
   gap: 3px;
 }
+.modal-zone .modal .modal-body .modal-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .modal-zone .modal .modal-body .modal-text > * {
   color: #101010;
+  line-height: 1.5;
 }
 .modal-zone .modal .modal-body .modal-link {
   display: flex;

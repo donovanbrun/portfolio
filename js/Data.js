@@ -81,6 +81,24 @@ export const data = {
                             <h4>Status : in progress</h4>`
         },
         {
+            "name": "Rundash",
+            "description": "Sports analytics application",
+            "date": "2024",
+            "img": "img/projects/rundash.png",
+            "detail": "Analyse your performances",
+            "try": "https://rundash.donovanbrun.com/",
+            "link": [
+                {
+                    "name": "Github",
+                    "url": "https://github.com/donovanbrun/rundash"
+                }
+            ],
+            "tech": "vue,typescript",
+            "htmlContent": `<h3>A web application for analysing running, cycling and swimming performances</h3>
+                            <p>Allows importing activities in .gpx format, computing and displaying information through tables and graphs.</p>
+                            <h4>Status : in progress</h4>`
+        },
+        {
             "name": "Ready Player One",
             "description": "Physical contacts simulator",
             "date": "October 2023 - March 2024",
