@@ -10,7 +10,7 @@ export const data = {
             "link": [
                 {
                     "name": "Backend",
-                    "url": "https://github.com/donovanbrun/organizr-front"
+                    "url": "https://github.com/donovanbrun/organizr-back"
                 },
                 {
                     "name": "Frontend",
